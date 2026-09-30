@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Asknetic Group</title>
+<meta name="description" content="Asknetic Enterprises Ltd — a diversified group of companies based in Dar es Salaam, Tanzania, working across ICT, real estate, agro crop, building maintenance, car hire, travel & visa assistance, and general supplies.">
+<link rel="canonical" href="https://www.askneticgroup.co.tz/">
+<meta property="og:title" content="Asknetic Group — Dar es Salaam, Tanzania">
+<meta property="og:description" content="A diversified group of companies based in Dar es Salaam, Tanzania, working across ICT, real estate, agro crop, building maintenance, car hire, travel & visa assistance, and general supplies.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.askneticgroup.co.tz/">
+<link rel="icon" type="image/png" href="../image-icons/ask-logo%20white.png">
+<link rel="icon" href="../image-icons/favicon.ico" sizes="any">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#181411',
+          inksoft: '#645A52',
+          paper: '#FFFFFF',
+          cream: '#FBF7F1',
+          flame: '#E17A2E',
+          flame2: '#F4A05C',
+          flamedeep: '#B85A18',
+          navy: '#211C18',
+        },
+        fontFamily: {
+          display: ['Outfit', 'sans-serif'],
+          sans: ['Inter', 'sans-serif'],
+        },
+        boxShadow: {
+          soft: '0 20px 50px -20px rgba(24,20,17,0.25)',
+          card: '0 10px 30px -10px rgba(24,20,17,0.12)',
+        }
+      }
+    }
+  }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" crossorigin="anonymous" defer></script>
+
+<style>
+  html{scroll-behavior:smooth;}
+  body{-webkit-font-smoothing:antialiased;}
+  ::selection{background:#E17A2E;color:#fff;}
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+  }
+  @keyframes floatDelayed {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(8px); }
+  }
+  .animate-float { animation: float 4s ease-in-out infinite; }
+  .animate-float-delayed { animation: floatDelayed 5s ease-in-out infinite; }
+
+  html .reveal, html .reveal-left, html .reveal-right, html .reveal-scale{
+    opacity:0;
+    transition:opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1);
+    transition-delay:var(--d,0ms);
+    will-change:opacity,transform;
+  }
+  html .reveal{transform:translateY(32px);}
+  html .reveal-left{transform:translateX(-40px);}
+  html .reveal-right{transform:translateX(40px);}
+  html .reveal-scale{transform:scale(.92);}
+  html .reveal.active, html .reveal-left.active, html .reveal-right.active, html .reveal-scale.active{
+    opacity:1;transform:none;
+  }
+
+  @keyframes scrollDot {
+    0% { transform: translateY(0); opacity: 1; }
+    70% { transform: translateY(14px); opacity: 0.3; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+  .animate-scrollDot{ animation: scrollDot 1.6s ease-in-out infinite; }
+
+  #backToTop{
+    opacity:0;
+    transform:translateY(16px);
+    pointer-events:none;
+    transition:opacity .3s ease, transform .3s ease, background-color .2s ease;
+  }
+  #backToTop.show{opacity:1;transform:none;pointer-events:auto;}
+  #backToTop.show:hover{transform:translateY(-3px);}
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{transition:none!important;}
+    html .reveal, html .reveal-left, html .reveal-right, html .reveal-scale{opacity:1;transform:none;}
+  }
+</style>
+<noscript><style>html .reveal,html .reveal-left,html .reveal-right,html .reveal-scale{opacity:1!important;transform:none!important;}</style></noscript>
+</head>
+<body class="bg-cream text-ink font-sans antialiased overflow-x-hidden w-full">
+
+<!-- HEADER -->
+<header id="site-header" class="fixed top-0 inset-x-0 z-50 w-full transition-colors duration-300">
+  <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 py-3 w-full">
+  
+  <a href="index.html" class="flex items-center gap-2.5 shrink-0 focus:outline-none">
+    <img src="../image-icons/ask-logo%20white.png" alt="Asknetic Group Logo" class="h-16 md:h-18 w-auto max-w-full object-contain transition-transform duration-200 hover:scale-105">
+  </a>
+ 
+  <ul id="navlinks" class="hidden lg:flex items-center gap-8 list-none m-0 p-0">
+    <li>
+      <a href="index.html" class="text-base font-semibold text-flame hover:text-flamedeep transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-flame" aria-current="page">Home</a>
+    </li>
+    <li>
+      <a href="about-us.html" class="text-base font-semibold text-black hover:text-flame transition-colors py-1">About Us</a>
+    </li>
+    <li class="relative group">
+      <button id="sectorsBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="sectorsMenu" class="flex items-center gap-1.5 text-base font-semibold text-black hover:text-flame transition-colors py-1 focus:outline-none">
+        <span>Services</span>
+        <i id="sectorsArrow" class="fa-solid fa-chevron-down text-[10px] transition-transform duration-200"></i>
+      </button>
+      
+      <!-- Fixed Hover Gap with Padding Bridge -->
+      <div id="sectorsMenu" class="hidden absolute top-full left-1/2 -translate-x-1/2 pt-2 w-64 z-50">
+        <div class="bg-navy/95 backdrop-blur-xl border border-white/10 rounded-2xl p-2.5 flex flex-col gap-1 shadow-2xl">
+          <a href="services.html#ict" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">ICT Solutions</a>
+          <a href="services.html#real-estate" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">Real Estate</a>
+          <a href="services.html#agro" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">Agro Crops</a>
+          <a href="services.html#maintenance" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">Building Maintenance</a>
+          <a href="services.html#car-hire" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">Car Hire</a>
+          <a href="services.html#travel" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">Travel & Visa Assistance</a>
+          <a href="services.html#supplies" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">General Supplies</a>
+        <div class="my-1 border-t border-white/10"></div>
+        <a href="services.html" class="px-3 py-2 rounded-xl text-xs font-semibold text-flame hover:bg-flame/10 hover:text-flamedeep transition-all">
+          <span>View All Services</span>
+          <i class="fa-solid fa-arrow-right text-xs ml-1"></i>
+        </a>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="contact.html" class="text-base font-semibold text-black hover:text-flame transition-colors py-1">Contact Us</a>
+    </li>
+  </ul>
+ 
+  <a href="contact.html" class="hidden lg:inline-flex items-center gap-2 bg-flamedeep hover:bg-flame text-white px-6 py-2.5 rounded-full text-base font-semibold transition-all shadow-md hover:shadow-xl hover:-translate-y-0.5 shrink-0 shadow-flamedeep focus:outline-none focus:ring-2 focus:ring-flame focus:ring-offset-2">
+    <span>Get in Touch</span>
+    <i class="fa-solid fa-arrow-right text-xs ml-1"></i>
+  </a>
+   
+    <button id="navtoggle" type="button" class="lg:hidden w-10 h-10 rounded-full hover:bg-white/25 flex items-center justify-center text-flame transition-colors focus:outline-none" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobilemenu">
+      <i class="fa-solid fa-bars shadow-lg shadow-flame" id="navtoggle-icon"></i>
+    </button>
+</nav>
+ 
+<div id="mobilemenu" class="hidden lg:hidden mx-4 mt-2 rounded-2xl bg-navy/95 backdrop-blur-xl border border-white/20 shadow-2xl px-6 py-4">
+  <a href="index.html" class="block py-3 border-b border-white/10 text-base font-semibold text-white hover:text-flame transition-colors">Home</a>
+  <a href="about-us.html" class="block py-3 border-b border-white/10 text-base font-semibold text-white hover:text-flame transition-colors">About Us</a>
+  
+  <div class="border-b border-white/10 py-3">
+    <button id="mobileSectorsBtn" type="button" aria-expanded="false" aria-controls="mobileSectorsMenu" class="flex items-center justify-between w-full text-base font-semibold text-white hover:text-flame transition-colors focus:outline-none">
+      <span>Services</span>
+      <i id="mobileSectorsArrow" class="fa-solid fa-chevron-down text-xs transition-transform duration-200"></i>
+    </button>
+    
+    <div id="mobileSectorsMenu" class="hidden pl-4 pt-4 flex flex-col gap-3 text-sm">
+      <a href="services.html#ict" class="text-white/80 hover:text-flame transition-colors">ICT Solutions</a>
+      <a href="services.html#real-estate" class="text-white/80 hover:text-flame transition-colors">Real Estate</a>
+      <a href="services.html#agro" class="text-white/80 hover:text-flame transition-colors">Agro Crops</a>
+      <a href="services.html#maintenance" class="text-white/80 hover:text-flame transition-colors">Building Maintenance</a>
+      <a href="services.html#car-hire" class="text-white/80 hover:text-flame transition-colors">Car Hire</a>
+      <a href="services.html#travel" class="text-white/80 hover:text-flame transition-colors">Travel & Visa Assistance</a>
+      <a href="services.html#supplies" class="text-white/80 hover:text-flame transition-colors">General Supplies</a>
+    </div>
+  </div>
+ 
+  <a href="contact.html" class="block py-3 border-b border-white/10 text-base font-semibold text-white hover:text-flame transition-colors">Contact Us</a>
+  
+  <div class="pt-5 pb-2">
+    <a href="contact.html" class="flex items-center justify-center w-full bg-flame text-white py-3 rounded-full text-base font-semibold hover:bg-flamedeep transition-colors shadow-2xl shadow-amber-400">
+      Get in Touch
+    </a>
+  </div>
+</div>
+</header>
+
+<main id="top">
+
+<!-- HERO SECTION -->
+<section class="relative">
+  <div class="relative overflow-hidden bg-navy">
+    <div
+      class="absolute inset-0 w-full h-full bg-cover bg-center scale-110"
+      style="background-image: url('../image-icons/cooperate-1.jpg');"
+      aria-hidden="true">
+    </div>
+
+    <div class="absolute inset-0 bg-gradient-to-b from-navy/80 via-navy/70 to-navy/90"></div>
+
+    <div class="relative max-w-7xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24 pt-24 pb-14 md:pt-32 md:pb-16">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+        
+        <div class="reveal max-w-2xl text-center lg:text-left z-10">
+          <h1 class="font-display font-bold leading-[1.08] text-4xl md:text-6xl text-white">
+            Securing Growth.<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-flame2 to-flame">Building Tanzania.</span>
+          </h1>
+          <p class="mt-6 text-white/70 text-lg max-w-lg mx-auto lg:mx-0">
+            Asknetic Enterprises Ltd delivers diversified solutions across seven sectors from ICT to agro crop, real estate to travel with one standard of service across Tanzania.
+          </p>
+        </div>
+
+        <div class="reveal relative flex items-center justify-center w-full max-w-md mx-auto lg:max-w-none my-8 lg:my-0">
+          <div class="relative w-[280px] h-[280px] sm:w-[380px] sm:h-[380px] lg:w-[420px] lg:h-[420px] rounded-full p-3 border-2 border-amber-400/40 bg-gradient-to-tr from-amber-500/20 to-transparent flex items-center justify-center shadow-2xl">
+            
+            <div class="w-full h-full rounded-full overflow-hidden relative border-4 border-white/20 bg-slate-900/90 flex items-center justify-center p-8 shadow-inner">
+              <img 
+                src="../image-icons/ask-logo%20blvk.png" 
+                alt="Asknetic Logo" 
+                class="w-full h-full object-contain"
+              />
+            </div>
+
+            <div class="absolute -top-4 -left-2 sm:top-2 sm:-left-6 bg-white/15 backdrop-blur-xl border border-white/25 text-white px-4 py-2.5 rounded-2xl shadow-2xl flex items-center gap-3 animate-float">
+              <div class="w-9 h-9 rounded-xl bg-flame/30 flex items-center justify-center text-flame font-bold text-sm">
+                <i class="fa-solid fa-calendar"></i>
+              </div>
+              <div>
+                <div class="font-bold text-sm leading-tight">2023</div>
+                <div class="text-[10px] text-white/70">Founded</div>
+              </div>
+            </div>
+
+            <div class="absolute top-8 -right-4 sm:top-12 sm:-right-8 bg-white/15 backdrop-blur-xl border border-white/25 text-white px-4 py-2.5 rounded-2xl shadow-2xl flex items-center gap-3 animate-float-delayed">
+              <div class="w-9 h-9 rounded-xl bg-amber-400/30 flex items-center justify-center text-amber-300 font-bold text-sm">
+                <i class="fa-solid fa-diagram-project"></i>
+              </div>
+              <div>
+                <div class="font-bold text-sm leading-tight">7</div>
+                <div class="text-[10px] text-white/70">Core Services</div>
+              </div>
+            </div>
+
+            <div class="absolute -bottom-2 -right-2 sm:bottom-4 sm:-right-6 bg-white/15 backdrop-blur-xl border border-white/25 text-white px-4 py-2.5 rounded-2xl shadow-2xl flex items-center gap-3 animate-float">
+              <div class="w-9 h-9 rounded-xl bg-emerald-400/30 flex items-center justify-center text-emerald-300 font-bold text-sm">
+                <i class="fa-solid fa-clock"></i>
+              </div>
+              <div>
+                <div class="font-bold text-sm leading-tight">24/7</div>
+                <div class="text-[10px] text-white/70">Service Delivery</div>
+              </div>
+            </div>
+
+            <div class="absolute bottom-10 -left-6 sm:bottom-12 sm:-left-10 bg-white/15 backdrop-blur-xl border border-white/25 text-white px-4 py-2.5 rounded-2xl shadow-2xl flex items-center gap-3 animate-float-delayed">
+              <div class="w-9 h-9 rounded-xl bg-sky-400/30 flex items-center justify-center text-sky-300 font-bold text-sm">
+                <i class="fa-solid fa-earth-africa"></i>
+              </div>
+              <div>
+                <div class="font-bold text-sm leading-tight">TZ</div>
+                <div class="text-[10px] text-white/70">Mainland & Zanzibar</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="absolute bottom-5 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+      <span class="w-6 h-10 rounded-full border-2 border-white/50 flex justify-center pt-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-flamedeep animate-scrollDot"></span>
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+  <section id="about" class="py-10 md:py-16 bg-white scroll-mt-10">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24 grid lg:grid-cols-2 gap-14 items-center">
+      <div class="reveal">
+        <span class="inline-block bg-orange-100/80 text-orange-600 font-semibold text-xs px-4 py-1.5 rounded-full mb-4">
+          About Asknetic Group
+        </span>
+        <h2 class="font-display font-bold text-3xl md:text-4xl mt-3 mb-5 leading-tight">Your trusted partner for sustainable growth.</h2>
+        <p class="text-inksoft mb-3">Asknetic Enterprises Ltd was established in 2023 as a group of companies in Tanzania, located in Dar es Salaam, with the intention of securing lucrative business and investment opportunities within Tanzania.</p>
+        <p class="text-inksoft mb-6">We pride ourselves on employing the best and brightest individuals, utilising the highest quality materials and the latest methods, to ensure our customers receive the level of quality and value they deserve.</p>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-center gap-3 text-sm font-medium"><i class="fa-solid fa-circle-check text-flame"></i> Reliable, 24-hour tracked service delivery</li>
+          <li class="flex items-center gap-3 text-sm font-medium"><i class="fa-solid fa-circle-check text-flame"></i> Trusted across seven diversified sectors</li>
+          <li class="flex items-center gap-3 text-sm font-medium"><i class="fa-solid fa-circle-check text-flame"></i> Cost-effective, ethical &amp; client-centric</li>
+        </ul>
+        <a href="contact.html" class="inline-flex items-center gap-2 bg-flame text-white px-7 py-3.5 rounded-full font-semibold text-sm hover:bg-flamedeep transition-colors shadow-lg shadow-flame">Learn More About Us<i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="reveal relative">
+        <img src="../image-icons/officewoman.jpg" alt="Asknetic Enterprises Ltd" class="rounded-2xl shadow-soft">
+        <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-soft px-6 py-5 max-w-[220px]">
+          <div class="font-display font-bold text-2xl text-flame">2023</div>
+          <div class="text-sm font-semibold mt-1">Founded</div>
+          <div class="text-xs text-inksoft mt-1">Securing opportunities across Tanzania.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION & VISION SECTION -->
+<section class="py-12 md:py-16 bg-flame/10 relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      
+      <div class="reveal lg:col-span-5 flex flex-col items-start">
+        <span class="inline-block bg-orange-100/80 text-orange-600 font-semibold text-xs px-4 py-1.5 rounded-full mb-4">
+          Our Purpose
+        </span>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-slate-900 leading-tight">
+          Driven by Purpose, Guided by Excellence
+        </h2>
+        <p class="mt-4 text-slate-600 text-base sm:text-lg leading-relaxed">
+          Our mission and vision shape every decision we make and service we deliver to guarantee sustainable growth and unmatched service delivery across Africa.
+        </p>
+      </div>
+
+      <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        
+        <div class="reveal group bg-white rounded-3xl p-5 sm:p-6 border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-orange-300 hover:-translate-y-1.5 transition-all duration-300 ease-out cursor-pointer">
+          <div class="flex flex-col items-start gap-3 mb-2">
+            <div class="w-10 h-10 rounded-2xl bg-orange-100/70 group-hover:bg-orange-500 text-orange-500 group-hover:text-white flex items-center justify-center text-base flex-shrink-0 transition-all duration-300 group-hover:scale-110">
+              <i class="fa-regular fa-compass"></i>
+            </div>
+            <h3 class="font-display font-bold text-lg text-slate-900 group-hover:text-orange-500 transition-colors duration-300">
+              Our Vision
+            </h3>
+          </div>
+          <p class="text-slate-600 group-hover:text-slate-700 text-sm sm:text-base leading-relaxed italic pl-0 transition-colors duration-300">
+            "To become prominent and diverse company with excellent service in all our core businesses."
+          </p>
+        </div>
+
+        <div class="reveal group bg-white rounded-3xl p-5 sm:p-6 border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-orange-300 hover:-translate-y-1.5 transition-all duration-300 ease-out cursor-pointer">
+          <div class="flex flex-col items-start gap-3 mb-2">
+            <div class="w-10 h-10 rounded-2xl bg-orange-100/70 group-hover:bg-orange-500 text-orange-500 group-hover:text-white flex items-center justify-center text-base flex-shrink-0 transition-all duration-300 group-hover:scale-110">
+              <i class="fa-regular fa-eye"></i>
+            </div>
+            <h3 class="font-display font-bold text-lg text-slate-900 group-hover:text-orange-500 transition-colors duration-300">
+              Our Mission
+            </h3>
+          </div>
+          <p class="text-slate-600 group-hover:text-slate-700 text-sm sm:text-base leading-relaxed italic pl-0 transition-colors duration-300">
+            "Become essential to our customers by providing differentiated products and services to help them achieve their aspirations and us to be the best in class service provider in Africa."
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: VALUES -->
+<section id="values" class="py-10 md:py-16 bg-slate-50 relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      
+      <div class="reveal lg:col-span-7 flex justify-center items-center relative py-10">
+        <div class="absolute w-72 h-72 md:w-96 md:h-96 bg-orange-100/60 rounded-full filter blur-3xl -z-10"></div>
+
+        <div class="relative w-full max-w-[480px] sm:max-w-[540px] aspect-square flex items-center justify-center">
+          
+          <div class="absolute z-20 w-32 sm:w-40 aspect-[1/1.15] bg-gradient-to-br from-flame to-flamedeep text-white shadow-xl shadow-orange-500/20 flex flex-col items-center justify-center p-4 transition-transform duration-300 hover:scale-105 [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)]">
+            <div class="text-3xl sm:text-4xl mb-1">
+              <i class="fa-solid fa-layer-group"></i>
+            </div>
+            <span class="font-display font-bold text-sm sm:text-base tracking-wider uppercase">VALUES</span>
+          </div>
+
+          <div class="absolute -translate-x-20 -translate-y-28 sm:-translate-x-28 sm:-translate-y-36 z-10 group">
+            <div class="w-28 sm:w-36 aspect-[1/1.15] bg-white border border-slate-100 shadow-md group-hover:shadow-xl group-hover:bg-flame transition-all duration-300 flex flex-col items-center justify-center p-3 text-center cursor-pointer [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)]">
+              <i class="fa-solid fa-truck-fast text-flame group-hover:text-white text-xl sm:text-2xl mb-1 transition-colors"></i>
+              <h3 class="font-bold text-slate-800 group-hover:text-white text-xs sm:text-sm leading-tight transition-colors">Reliability</h3>
+            </div>
+          </div>
+
+          <div class="absolute translate-x-20 -translate-y-28 sm:translate-x-28 sm:-translate-y-36 z-10 group">
+            <div class="w-28 sm:w-36 aspect-[1/1.15] bg-white border border-slate-100 shadow-md group-hover:shadow-xl group-hover:bg-flame transition-all duration-300 flex flex-col items-center justify-center p-3 text-center cursor-pointer [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)]">
+              <i class="fa-solid fa-handshake text-flame group-hover:text-white text-xl sm:text-2xl mb-1 transition-colors"></i>
+              <h3 class="font-bold text-slate-800 group-hover:text-white text-xs sm:text-sm leading-tight transition-colors">Trust</h3>
+            </div>
+          </div>
+
+          <div class="absolute translate-x-32 sm:translate-x-44 z-10 group">
+            <div class="w-28 sm:w-36 aspect-[1/1.15] bg-white border border-slate-100 shadow-md group-hover:shadow-xl group-hover:bg-flame transition-all duration-300 flex flex-col items-center justify-center p-3 text-center cursor-pointer [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)]">
+              <i class="fa-solid fa-clock text-flame group-hover:text-white text-xl sm:text-2xl mb-1 transition-colors"></i>
+              <h3 class="font-bold text-slate-800 group-hover:text-white text-xs sm:text-sm leading-tight transition-colors">Availability</h3>
+            </div>
+          </div>
+
+          <div class="absolute translate-x-20 translate-y-28 sm:translate-x-28 sm:translate-y-36 z-10 group">
+            <div class="w-28 sm:w-36 aspect-[1/1.15] bg-white border border-slate-100 shadow-md group-hover:shadow-xl group-hover:bg-flame transition-all duration-300 flex flex-col items-center justify-center p-3 text-center cursor-pointer [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)]">
+              <i class="fa-solid fa-face-smile text-flame group-hover:text-white text-xl sm:text-2xl mb-1 transition-colors"></i>
+              <h3 class="font-bold text-slate-800 group-hover:text-white text-xs sm:text-sm leading-tight transition-colors">Customer<br>Satisfaction</h3>
+            </div>
+          </div>
+
+          <div class="absolute -translate-x-20 translate-y-28 sm:-translate-x-28 sm:translate-y-36 z-10 group">
+            <div class="w-28 sm:w-36 aspect-[1/1.15] bg-white border border-slate-100 shadow-md group-hover:shadow-xl group-hover:bg-flame transition-all duration-300 flex flex-col items-center justify-center p-3 text-center cursor-pointer [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)]">
+              <i class="fa-solid fa-sack-dollar text-flame group-hover:text-white text-xl sm:text-2xl mb-1 transition-colors"></i>
+              <h3 class="font-bold text-slate-800 group-hover:text-white text-xs sm:text-sm leading-tight transition-colors">Cost<br>Effectiveness</h3>
+            </div>
+          </div>
+
+          <div class="absolute -translate-x-32 sm:-translate-x-44 z-10 group">
+            <div class="w-28 sm:w-36 aspect-[1/1.15] bg-white border border-slate-100 shadow-md group-hover:shadow-xl group-hover:bg-flame transition-all duration-300 flex flex-col items-center justify-center p-3 text-center cursor-pointer [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)]">
+              <i class="fa-solid fa-scale-balanced text-flame group-hover:text-white text-xl sm:text-2xl mb-1 transition-colors"></i>
+              <h3 class="font-bold text-slate-800 group-hover:text-white text-xs sm:text-sm leading-tight transition-colors">Responsibility</h3>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="reveal lg:col-span-5 text-center lg:text-left">
+        <span class="text-xs font-bold tracking-widest uppercase text-flamedeep bg-orange-100/80 px-4 py-1.5 rounded-full inline-block mb-4">
+          VALUES
+        </span>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl md:text-5xl text-slate-900 leading-tight mb-6">
+          Our Six Values
+        </h2>
+        <p class="text-slate-600 text-base md:text-lg leading-relaxed mb-8">
+          We adhere to six basic core values that serve as the cornerstone of all the services we provide. These values are at the heart of our business model and provide you with the assurance that your business needs will be met and expectations exceeded.
+        </p>
+        <a href="about-us.html" class="inline-flex items-center justify-center px-8 py-4 bg-flame hover:bg-flamedeep text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg shadow-orange-500/20 hover:shadow-orange-500/30 transition-all duration-300 hover:-translate-y-0.5">
+          Read More
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SECTOR SECTION -->
+<section id="sectors" class="py-10 md:py-14 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24">
+    
+    <div class="grid md:grid-cols-2 gap-6 items-end mb-8">
+      <div class="reveal">
+        <span class="text-xs font-bold tracking-widest uppercase text-flamedeep bg-orange-100 px-4 py-1.5 rounded-full inline-block mb-3">
+          WHAT WE DO
+        </span>
+        <h2 class="font-display font-bold text-3xl md:text-5xl text-slate-900 leading-tight">
+          Solutions across every sector we serve.
+        </h2>
+      </div>
+      <p class="reveal text-inksoft text-base md:text-lg">
+        From ICT to agro crop, we provide end-to-end services tailored to Tanzania's growing business landscape backed by a worldwide network of partnerships.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      
+      <!-- 01. ICT -->
+      <div class="reveal bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col justify-between group">
+        <div>
+          <div class="relative h-24 w-full overflow-hidden">
+            <img src="../image-icons/ict-digital-solutions.webp" alt="ICT & Digital Solutions" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
+            <div class="absolute bottom-3 left-6 w-9 h-9 rounded-xl bg-flame text-white flex items-center justify-center text-sm shadow-md">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+          </div>
+
+          <div class="p-3 pt-2">
+            <h3 class="font-display font-bold text-lg text-slate-900 mb-1.5">ICT & Digital Solutions</h3>
+            <p class="text-xs text-slate-500 leading-relaxed mb-1.5">
+              Comprehensive technology solutions to transform your business digitally.
+            </p>
+
+            <div class="flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-600 mb-2">
+              <span class="bg-orange-50 text-orange-800/80 px-2 py-0.5 rounded-md border border-orange-100">Systems Integration</span>
+              <span class="bg-orange-50 text-orange-800/80 px-2 py-0.5 rounded-md border border-orange-100">Software Solutions</span>
+              <span class="bg-orange-50 text-orange-800/80 px-2 py-0.5 rounded-md border border-orange-100">Cybersecurity</span>
+              <span class="bg-orange-50 text-orange-800/80 px-2 py-0.5 rounded-md border border-orange-100">+3 more</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="px-3 pb-3 pt-0">
+          <a href="services.html#detail-ict" class="text-xs font-bold text-flamedeep inline-flex items-center gap-1.5 hover:gap-2 transition-all">
+            Learn More <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- 02. BUILDING MAINTENANCE -->
+      <div class="reveal bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col justify-between group">
+        <div>
+          <div class="relative h-24 w-full overflow-hidden">
+            <img src="../image-icons/building-maintenance.webp" alt="Building Maintenance" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
+            <div class="absolute bottom-3 left-6 w-9 h-9 rounded-xl bg-flame text-white flex items-center justify-center text-sm shadow-md">
+              <i class="fa-solid fa-hard-hat"></i>
+            </div>
+          </div>
+
+          <div class="p-3 pt-2">
+            <h3 class="font-display font-bold text-lg text-slate-900 mb-1.5">Building Maintenance</h3>
+            <p class="text-xs text-slate-500 leading-relaxed mb-1.5">
+              Professional maintenance services to keep your property in pristine condition.
+            </p>
+
+            <div class="flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-600 mb-2">
+              <span class="bg-orange-50 text-orange-800/80 px-2 py-0.5 rounded-md border border-orange-100">Air Conditioning Systems</span>
+              <span class="bg-orange-50 text-orange-800/80 px-2 py-0.5 rounded-md border border-orange-100">Electrical Services</span>
+              <span class="bg-orange-50 text-orange-800/80 px-2 py-0.5 rounded-md border border-orange-100">Carpentry</span>
+              <span class="bg-orange-50 text-orange-800/80 px-2 py-0.5 rounded-md border border-orange-100">+6 more</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="px-3 pb-3 pt-0">
+          <a href="services.html#detail-building" class="text-xs font-bold text-flamedeep inline-flex items-center gap-1.5 hover:gap-2 transition-all">
+            Learn More <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- 03. AGRO CROP -->
+      <div class="reveal bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col justify-between group">
+        <div>
+          <div class="relative h-24 w-full overflow-hidden">
+            <img src="../image-icons/agro-crop.webp" alt="Agro Crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
+            <div class="absolute bottom-3 left-6 w-9 h-9 rounded-xl bg-flame text-white flex items-center justify-center text-sm shadow-md">
+              <i class="fa-solid fa-wheat-awn"></i>
+            </div>
+          </div>
+
+          <div class="p-3 pt-2">
+            <h3 class="font-display font-bold text-lg text-slate-900 mb-1.5">Agro Crop</h3>
+            <p class="text-xs text-slate-500 leading-relaxed mb-1.5">
+              Premium quality agricultural products for export and local markets.
+            </p>
+
+            <div class="flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-600 mb-2">
+              <span class="bg-orange-50 text-orange-800/80 px-2 py-0.5 rounded-md border border-orange-100">Sesame Seeds</span>
+              <span class="bg-orange-50 text-orange-800/80 px-2 py-0.5 rounded-md border border-orange-100">Cashew Nuts</span>
+              <span class="bg-orange-50 text-orange-800/80 px-2 py-0.5 rounded-md border border-orange-100">Maize</span>
+              <span class="bg-orange-50 text-orange-800/80 px-2 py-0.5 rounded-md border border-orange-100">+4 more</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="px-3 pb-3 pt-0">
+          <a href="services.html#detail-agro" class="text-xs font-bold text-flamedeep inline-flex items-center gap-1.5 hover:gap-2 transition-all">
+            Learn More <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- 04. REAL ESTATE -->
+      <div class="reveal bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col justify-between group">
+        <div>
+          <div class="relative h-24 w-full overflow-hidden">
+            <img src="../image-icons/building.webp" alt="Real Estate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
+            <div class="absolute bottom-3 left-6 w-9 h-9 rounded-xl bg-flame text-white flex items-center justify-center text-sm shadow-md">
+              <i class="fa-solid fa-building"></i>
+            </div>
+          </div>
+
+          <div class="p-3 pt-2">
+            <h3 class="font-display font-bold text-lg text-slate-900 mb-1.5">Real Estate</h3>
+            <p class="text-xs text-slate-500 leading-relaxed mb-1.5">
+              Complete real estate solutions for property marketing, sales, and leasing.
+            </p>
+
+            <div class="flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-600 mb-2">
+              <span class="bg-orange-50 text-orange-800/80 px-2 py-0.5 rounded-md border border-orange-100">Property Marketing</span>
+              <span class="bg-orange-50 text-orange-800/80 px-2 py-0.5 rounded-md border border-orange-100">Leasing</span>
+              <span class="bg-orange-50 text-orange-800/80 px-2 py-0.5 rounded-md border border-orange-100">Property Sales</span>
+              <span class="bg-orange-50 text-orange-800/80 px-2 py-0.5 rounded-md border border-orange-100">+1 more</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="px-3 pb-3 pt-0">
+          <a href="services.html#detail-realestate" class="text-xs font-bold text-flamedeep inline-flex items-center gap-1.5 hover:gap-2 transition-all">
+            Learn More <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- 05. GENERAL SUPPLIES -->
+      <div class="reveal bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col justify-between group">
+        <div>
+          <div class="relative h-24 w-full overflow-hidden">
+            <img src="../image-icons/general-supplies.webp" alt="General Supplies" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
+            <div class="absolute bottom-3 left-6 w-9 h-9 rounded-xl bg-flame text-white flex items-center justify-center text-sm shadow-md">
+              <i class="fa-solid fa-boxes-stacked"></i>
+            </div>
+          </div>
+
+          <div class="p-3 pt-2">
+            <h3 class="font-display font-bold text-lg text-slate-900 mb-1.5">General Supplies</h3>
+            <p class="text-xs text-slate-500 leading-relaxed mb-1.5">
+              Quality supplies and equipment for businesses and organizations.
+            </p>
+
+            <div class="flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-600 mb-2">
+              <span class="bg-orange-50 text-orange-800/80 px-2 py-0.5 rounded-md border border-orange-100">Office Equipment</span>
+              <span class="bg-orange-50 text-orange-800/80 px-2 py-0.5 rounded-md border border-orange-100">Machinery & Spare Parts</span>
+              <span class="bg-orange-50 text-orange-800/80 px-2 py-0.5 rounded-md border border-orange-100">ICT Equipment</span>
+              <span class="bg-orange-50 text-orange-800/80 px-2 py-0.5 rounded-md border border-orange-100">+4 more</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="px-3 pb-3 pt-0">
+          <a href="services.html#detail-supplies" class="text-xs font-bold text-flamedeep inline-flex items-center gap-1.5 hover:gap-2 transition-all">
+            Learn More <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- 06. TRAVEL AGENCY & VISA ASSISTANCE -->
+      <div class="reveal bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col justify-between group">
+        <div>
+          <div class="relative h-24 w-full overflow-hidden">
+            <img src="../image-icons/travel-agency.webp" alt="Travel Agency & Visa Assistance" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
+            <div class="absolute bottom-3 left-6 w-9 h-9 rounded-xl bg-flame text-white flex items-center justify-center text-sm shadow-md">
+              <i class="fa-solid fa-plane-departure"></i>
+            </div>
+          </div>
+
+          <div class="p-3 pt-2">
+            <h3 class="font-display font-bold text-lg text-slate-900 mb-1.5">Travel Agency & Visa Assistance</h3>
+            <p class="text-xs text-slate-500 leading-relaxed mb-1.5">
+              Expert travel planning and visa processing services.
+            </p>
+
+            <div class="flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-600 mb-2">
+              <span class="bg-orange-50 text-orange-800/80 px-2 py-0.5 rounded-md border border-orange-100">Visa Counseling</span>
+              <span class="bg-orange-50 text-orange-800/80 px-2 py-0.5 rounded-md border border-orange-100">Flight Booking</span>
+              <span class="bg-orange-50 text-orange-800/80 px-2 py-0.5 rounded-md border border-orange-100">Corporate Travel</span>
+              <span class="bg-orange-50 text-orange-800/80 px-2 py-0.5 rounded-md border border-orange-100">+2 more</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="px-3 pb-3 pt-0">
+          <a href="services.html#detail-travel" class="text-xs font-bold text-flamedeep inline-flex items-center gap-1.5 hover:gap-2 transition-all">
+            Learn More <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- 07. CAR HIRE -->
+      <div class="reveal bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col justify-between group">
+        <div>
+          <div class="relative h-24 w-full overflow-hidden">
+            <img src="../image-icons/cruiser42.jpg" alt="Car Hire" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
+            <div class="absolute bottom-3 left-6 w-9 h-9 rounded-xl bg-flame text-white flex items-center justify-center text-sm shadow-md">
+              <i class="fa-solid fa-car"></i>
+            </div>
+          </div>
+
+          <div class="p-3 pt-2">
+            <h3 class="font-display font-bold text-lg text-slate-900 mb-1.5">Car Hire</h3>
+            <p class="text-xs text-slate-500 leading-relaxed mb-1.5">
+              Reliable vehicle rental services across Tanzania and Zanzibar.
+            </p>
+
+            <div class="flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-600 mb-2">
+              <span class="bg-orange-50 text-orange-800/80 px-2 py-0.5 rounded-md border border-orange-100">Tanzania Mainland Rentals</span>
+              <span class="bg-orange-50 text-orange-800/80 px-2 py-0.5 rounded-md border border-orange-100">Zanzibar Rentals</span>
+              <span class="bg-orange-50 text-orange-800/80 px-2 py-0.5 rounded-md border border-orange-100">Business Travel</span>
+              <span class="bg-orange-50 text-orange-800/80 px-2 py-0.5 rounded-md border border-orange-100">+1 more</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="px-3 pb-3 pt-0">
+          <a href="services.html#detail-car" class="text-xs font-bold text-flamedeep inline-flex items-center gap-1.5 hover:gap-2 transition-all">
+            Learn More <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+  <!-- MD QUOTE -->
+  <section class="py-8 md:py-12 bg-cream">
+    <div class="reveal max-w-4xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24 text-center">
+      <i class="fa-solid fa-quote-left text-4xl text-flame/40 mb-6"></i>
+      <blockquote class="font-display font-semibold text-2xl md:text-3xl leading-snug">With our vision we will always strive harder in ensuring specialised solutions, so as to be a market leader and an epitome company.</blockquote>
+      <p class="mt-7 text-sm font-bold text-flamedeep">Word from the Managing Director</p>
+      <p class="text-xs text-inksoft mt-0.5">Asknetic Group</p>
+    </div>
+  </section>
+
+<!-- SECTION: WHY PARTNER WITH US -->
+<section id="why-us" class="py-10 md:py-16 bg-white relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24">
+    
+    <div class="reveal text-center max-w-3xl mx-auto mb-8">
+      <span class="text-xs font-bold tracking-widest uppercase text-flamedeep bg-orange-100/80 px-4 py-1.5 rounded-full inline-block mb-3">
+        WHY CHOOSE US
+      </span>
+      <h2 class="font-display font-bold text-3xl md:text-5xl text-slate-900 leading-tight">
+        Why Partner With Us?
+      </h2>
+      <p class="text-slate-500 mt-4 text-base md:text-lg">
+        We combine local expertise with global standards to deliver reliable, efficient, and scalable business solutions tailored to your unique needs.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      
+      <div class="reveal bg-slate-50 border border-slate-100 rounded-3xl p-5 hover:bg-white hover:shadow-xl hover:border-orange-200 transition-all duration-300 group flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-2xl bg-orange-100 text-flame flex items-center justify-center text-lg mb-3 group-hover:bg-flame group-hover:text-white transition-all duration-300 shadow-sm">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <h3 class="font-display font-bold text-lg text-slate-900 mb-1.5 group-hover:text-flame transition-colors">
+            Proven Expertise
+          </h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Years of multi-sector experience delivering high-quality, specialized solutions for local and international businesses.
+          </p>
+        </div>
+        <div class="mt-3 pt-2.5 border-t border-slate-200/60 flex items-center gap-2 text-xs font-semibold text-slate-400 group-hover:text-flamedeep">
+          <span>Industry standards guaranteed</span>
+        </div>
+      </div>
+
+      <div class="reveal bg-slate-50 border border-slate-100 rounded-3xl p-5 hover:bg-white hover:shadow-xl hover:border-orange-200 transition-all duration-300 group flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-2xl bg-orange-100 text-flame flex items-center justify-center text-lg mb-3 group-hover:bg-flame group-hover:text-white transition-all duration-300 shadow-sm">
+            <i class="fa-solid fa-arrows-spin"></i>
+          </div>
+          <h3 class="font-display font-bold text-lg text-slate-900 mb-1.5 group-hover:text-flame transition-colors">
+            End-to-End Services
+          </h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            One-stop operational support from ICT and procurement to travel logistics and real estate management.
+          </p>
+        </div>
+        <div class="mt-3 pt-2.5 border-t border-slate-200/60 flex items-center gap-2 text-xs font-semibold text-slate-400 group-hover:text-flamedeep">
+          <span>Seamless operations</span>
+        </div>
+      </div>
+
+      <div class="reveal bg-slate-50 border border-slate-100 rounded-3xl p-5 hover:bg-white hover:shadow-xl hover:border-orange-200 transition-all duration-300 group flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-2xl bg-orange-100 text-flame flex items-center justify-center text-lg mb-3 group-hover:bg-flame group-hover:text-white transition-all duration-300 shadow-sm">
+            <i class="fa-solid fa-users-gear"></i>
+          </div>
+          <h3 class="font-display font-bold text-lg text-slate-900 mb-1.5 group-hover:text-flame transition-colors">
+            Tailored Solutions
+          </h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            We adapt our services to match your exact timeline, budget, and operational goals for maximum ROI.
+          </p>
+        </div>
+        <div class="mt-3 pt-2.5 border-t border-slate-200/60 flex items-center gap-2 text-xs font-semibold text-slate-400 group-hover:text-flamedeep">
+          <span>Custom strategy built for you</span>
+        </div>
+      </div>
+
+      <div class="reveal bg-slate-50 border border-slate-100 rounded-3xl p-5 hover:bg-white hover:shadow-xl hover:border-orange-200 transition-all duration-300 group flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-2xl bg-orange-100 text-flame flex items-center justify-center text-lg mb-3 group-hover:bg-flame group-hover:text-white transition-all duration-300 shadow-sm">
+            <i class="fa-solid fa-network-wired"></i>
+          </div>
+          <h3 class="font-display font-bold text-lg text-slate-900 mb-1.5 group-hover:text-flame transition-colors">
+            Global Network
+          </h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Strong strategic alliances and global partnerships that allow us to scale operations quickly and effectively.
+          </p>
+        </div>
+        <div class="mt-3 pt-2.5 border-t border-slate-200/60 flex items-center gap-2 text-xs font-semibold text-slate-400 group-hover:text-flamedeep">
+          <span>Worldwide connections</span>
+        </div>
+      </div>
+
+      <div class="reveal bg-slate-50 border border-slate-100 rounded-3xl p-5 hover:bg-white hover:shadow-xl hover:border-orange-200 transition-all duration-300 group flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-2xl bg-orange-100 text-flame flex items-center justify-center text-lg mb-3 group-hover:bg-flame group-hover:text-white transition-all duration-300 shadow-sm">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3 class="font-display font-bold text-lg text-slate-900 mb-1.5 group-hover:text-flame transition-colors">
+            Complete Transparency
+          </h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Clear documentation, ethical business practices, and open communication lines every step of the way.
+          </p>
+        </div>
+        <div class="mt-3 pt-2.5 border-t border-slate-200/60 flex items-center gap-2 text-xs font-semibold text-slate-400 group-hover:text-flamedeep">
+          <span>100% accountable</span>
+        </div>
+      </div>
+
+      <div class="reveal bg-gradient-to-br from-flame to-flamedeep rounded-3xl p-5 text-white flex flex-col justify-between shadow-lg shadow-orange-500/20">
+        <div>
+          <span class="text-xs font-bold tracking-wider uppercase bg-white/20 px-3 py-1 rounded-full inline-block mb-2.5 text-white">
+            GET STARTED TODAY
+          </span>
+          <h3 class="font-display font-bold text-xl mb-2">
+            Ready to elevate your business?
+          </h3>
+          <p class="text-sm text-orange-100 leading-relaxed mb-3">
+            Let’s discuss how our services can add value to your organization.
+          </p>
+        </div>
+        <div>
+          <a href="contact.html" class="inline-flex items-center gap-2 px-6 py-3 bg-white text-flamedeep font-bold text-xs uppercase tracking-wider rounded-xl hover:bg-orange-50 transition-all duration-300 shadow-md">
+            Work With Us <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>  
+
+ <!-- SECTION: TRUSTED CLIENTS -->
+<section id="clients" class="py-10 md:py-16 bg-slate-50 relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24">
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20">
+
+      <div class="reveal lg:col-span-5 text-center lg:text-left">
+        <span class="text-xs font-bold tracking-widest uppercase text-flamedeep bg-orange-100/80 px-4 py-1.5 rounded-full inline-block mb-4">
+          OUR TRUSTED CLIENTS
+        </span>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl md:text-5xl text-slate-900 leading-tight mb-6">
+          Trusted by leading organisations in Tanzania.
+        </h2>
+        <p class="text-slate-600 text-base md:text-lg leading-relaxed mb-6">
+          We are proud to have partnered with top government institutions, embassies, and private enterprises across all our seven operational sectors.
+        </p>
+      </div>
+
+      <div class="reveal lg:col-span-7 relative flex justify-center items-center">
+
+        <div class="absolute w-80 h-80 bg-orange-200/40 rounded-full filter blur-3xl -z-10"></div>
+
+        <div class="relative w-full max-w-[560px] aspect-square mx-auto">
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 sm:w-40 sm:h-40 bg-white rounded-full shadow-xl shadow-slate-200/80 border border-slate-100 flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110 z-30 group">
+            <img src="../image-icons/trc-logo2.png" alt="TRC Logo" class="max-h-full max-w-full object-contain transition-all duration-300" />
+          </div>
+
+          <div class="absolute top-[12%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-28 h-28 sm:w-32 sm:h-32 bg-white rounded-full shadow-lg shadow-slate-200/60 border border-slate-100 flex items-center justify-center p-4 transition-transform duration-300 hover:scale-110 hover:shadow-xl z-20 group">
+            <img src="../image-icons/TANESCO.png" alt="TANESCO Logo" class="max-h-full max-w-full object-contain transition-all duration-300" />
+          </div>
+
+          <div class="absolute top-[19.3%] left-[72.3%] -translate-x-1/2 -translate-y-1/2 w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-full shadow-md shadow-slate-200/50 border border-slate-100 flex items-center justify-center p-3 transition-transform duration-300 hover:scale-110 z-10 group">
+            <img src="../image-icons/Judiciary%20logo.png" alt="Judiciary of Tanzania Logo" class="max-h-full max-w-full object-contain transition-all duration-300" />
+          </div>
+
+          <div class="absolute top-[38.3%] left-[86.1%] -translate-x-1/2 -translate-y-1/2 w-32 h-32 sm:w-36 sm:h-36 bg-white rounded-full shadow-xl shadow-slate-200/80 border border-slate-100 flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110 z-20 group">
+            <img src="../image-icons/TRA.png" alt="TRA Logo" class="max-h-full max-w-full object-contain transition-all duration-300" />
+          </div>
+
+          <div class="absolute top-[61.7%] left-[86.1%] -translate-x-1/2 -translate-y-1/2 w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-full shadow-md shadow-slate-200/60 border border-slate-100 flex items-center justify-center p-3 transition-transform duration-300 hover:scale-110 z-20 group">
+            <img src="../image-icons/nhc-logo.png" alt="NHC Logo" class="max-h-full max-w-full object-contain transition-all duration-300" />
+          </div>
+
+          <div class="absolute top-[80.7%] left-[72.3%] -translate-x-1/2 -translate-y-1/2 w-24 h-24 sm:w-28 sm:h-28 bg-white rounded-full shadow-md shadow-slate-200/50 border border-slate-100 flex items-center justify-center p-3 transition-transform duration-300 hover:scale-110 z-10 group">
+            <img src="../image-icons/AG-Morgan.png" alt="AG Morgan Logo" class="max-h-full max-w-full object-contain transition-all duration-300" />
+          </div>
+
+          <div class="absolute top-[88%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-full shadow-lg shadow-slate-200/60 border border-slate-100 flex items-center justify-center p-3 transition-transform duration-300 hover:scale-110 z-20 group">
+            <img src="../image-icons/embassy-kuwait.png" alt="Embassy of Kuwait Logo" class="max-h-full max-w-full object-contain transition-all duration-300" />
+          </div>
+
+          <div class="absolute top-[80.7%] left-[27.7%] -translate-x-1/2 -translate-y-1/2 w-24 h-24 sm:w-28 sm:h-28 bg-white rounded-full shadow-sm border border-slate-100 flex items-center justify-center p-2 transition-transform duration-300 hover:scale-110 z-10 group">
+            <img src="../image-icons/Andy-Enterprises.png" alt="Andy Enterprises Logo" class="max-h-full max-w-full object-contain transition-all duration-300" />
+          </div>
+
+          <div class="absolute top-[61.7%] left-[13.9%] -translate-x-1/2 -translate-y-1/2 w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-full shadow-md border border-slate-100 flex items-center justify-center p-3 transition-transform duration-300 hover:scale-110 z-10 group">
+            <img src="../image-icons/State-Aviation.png" alt="State Aviation Logo" class="max-h-full max-w-full object-contain transition-all duration-300" />
+          </div>
+
+          <div class="absolute top-[38.3%] left-[13.9%] -translate-x-1/2 -translate-y-1/2 w-24 h-24 sm:w-28 sm:h-28 bg-white border border-slate-100 rounded-full shadow-sm flex items-center justify-center p-2 transition-transform duration-300 hover:scale-110 z-10 group">
+            <img src="../image-icons/Active-Maintenance.png" alt="Active Maintenance Logo" class="max-h-full max-w-full object-contain transition-all duration-300" />
+          </div>
+
+          <div class="absolute top-[19.3%] left-[27.7%] -translate-x-1/2 -translate-y-1/2 w-20 h-20 sm:w-24 sm:h-24 bg-white border border-slate-100 rounded-full shadow-sm flex items-center justify-center p-2 transition-transform duration-300 hover:scale-110 z-10 group">
+            <img src="../image-icons/home-ground.png" alt="Home Ground Logo" class="max-h-full max-w-full object-contain transition-all duration-300" />
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer id="contact" class="relative bg-slate-950 text-slate-400 pt-0 pb-6 overflow-hidden">
+  
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-orange-600/5 rounded-full filter blur-[120px] pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24 relative z-10">
+
+    <div class="pt-8 pb-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 md:gap-6 border-b border-slate-800/80">
+
+      <div class="reveal lg:col-span-4">
+        <div class="flex justify-start items-center gap-3 mb-3">
+          <img src="../image-icons/ask-logo%20blvk.png" alt="Asknetic Group Logo" class="w-20 h-24 object-contain">
+        </div>
+        <p class="text-sm text-slate-400 leading-relaxed mb-3 max-w-sm">
+          A diversified group of companies based in Dar es Salaam, delivering high-impact solutions across seven core operational sectors throughout Tanzania.
+        </p>
+        <div class="flex items-center gap-3">
+          <a href="javascript:void(0)" aria-label="Facebook" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-flame hover:border-flame transition-all duration-300">
+            <i class="fa-brands fa-facebook-f text-sm"></i>
+          </a>
+          <a href="javascript:void(0)" aria-label="Twitter" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-flame hover:border-flame transition-all duration-300">
+            <i class="fa-brands fa-x-twitter text-sm"></i>
+          </a>
+          <a href="javascript:void(0)" aria-label="Instagram" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-flame hover:border-flame transition-all duration-300">
+            <i class="fa-brands fa-instagram text-sm"></i>
+          </a>
+          <a href="javascript:void(0)" aria-label="LinkedIn" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-flame hover:border-flame transition-all duration-300">
+            <i class="fa-brands fa-linkedin-in text-sm"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="reveal lg:col-span-3">
+        <h4 class="text-white text-xs font-bold uppercase tracking-widest mb-3">Our Services</h4>
+        <ul class="space-y-1.5 text-sm">
+          <li><a href="services.html#ict" class="hover:text-flame transition-all duration-200 inline-block hover:translate-x-1">ICT & Digital Solutions</a></li>
+          <li><a href="services.html#real-estate" class="hover:text-flame transition-all duration-200 inline-block hover:translate-x-1">Real Estate Management</a></li>
+          <li><a href="services.html#agro" class="hover:text-flame transition-all duration-200 inline-block hover:translate-x-1">Agro Crop Trading</a></li>
+          <li><a href="services.html#maintenance" class="hover:text-flame transition-all duration-200 inline-block hover:translate-x-1">Building Maintenance</a></li>
+          <li><a href="services.html#car-hire" class="hover:text-flame transition-all duration-200 inline-block hover:translate-x-1">Car Hire & Logistics</a></li>
+          <li><a href="services.html#travel" class="hover:text-flame transition-all duration-200 inline-block hover:translate-x-1">Travel & Visa Assistance</a></li>
+          <li><a href="services.html#supplies" class="hover:text-flame transition-all duration-200 inline-block hover:translate-x-1">General Supplies & Services</a></li>
+        </ul>
+      </div>
+
+      <div class="reveal lg:col-span-2">
+        <h4 class="text-white text-xs font-bold uppercase tracking-widest mb-3">Office Address</h4>
+        <address class="not-italic text-sm leading-relaxed space-y-1">
+          <p class="text-slate-300 font-medium"><i class="fa-solid fa-map-marker-alt text-flame mr-2"></i>Peninsula Noble Center</p>
+          <p><i class="fa-solid fa-envelope text-flame mr-2"></i>Oysterbay, PO Box 3176</p>
+          <p>Dar es Salaam, Tanzania</p>
+        </address>
+      </div>
+
+      <div class="reveal lg:col-span-3">
+        <h4 class="text-white text-xs font-bold uppercase tracking-widest mb-3">Get In Touch</h4>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a href="mailto:info@askneticgroup.co.tz" class="flex items-center gap-3 hover:text-flame transition-colors group">
+              <span class="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-flame group-hover:bg-flame group-hover:text-white transition-all">
+                <i class="fa-solid fa-envelope text-xs"></i>
+              </span>
+              <span class="break-all">info@askneticgroup.co.tz</span>
+            </a>
+          </li>
+          <li>
+            <a href="tel:+255799111141" class="flex items-center gap-3 hover:text-flame transition-colors group">
+              <span class="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-flame group-hover:bg-flame group-hover:text-white transition-all">
+                <i class="fa-solid fa-phone text-xs"></i>
+              </span>
+              <span>+255 799 111 141</span>
+            </a>
+          </li>
+          <li>
+            <a href="tel:+255655911211" class="flex items-center gap-3 hover:text-flame transition-colors group">
+              <span class="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-flame group-hover:bg-flame group-hover:text-white transition-all">
+                <i class="fa-solid fa-phone text-xs"></i>
+              </span>
+              <span>+255 655 911 211</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+      <p>© <span id="footer-year">2026</span> Asknetic Enterprises Ltd. All rights reserved.</p>
+      <div class="flex items-center gap-6">
+        <a href="javascript:void(0)" class="hover:text-slate-300 transition-colors">Privacy Policy</a>
+        <a href="javascript:void(0)" class="hover:text-slate-300 transition-colors">Terms of Service</a>
+        <span class="text-slate-400 font-semibold">www.askneticgroup.co.tz</span>
+      </div>
+    </div>
+
+  </div> 
+</footer>
+
+<!-- Repositioned back to top to clear WhatsApp button -->
+<button id="backToTop" type="button" aria-label="Back to top" class="fixed bottom-24 right-6 sm:bottom-28 sm:right-8 z-40 w-12 h-12 rounded-full bg-flamedeep hover:bg-flame text-white flex items-center justify-center shadow-lg shadow-flame/30 focus:outline-none focus:ring-2 focus:ring-flame focus:ring-offset-2">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<a href="https://wa.me/255799111141?text=Hello%20Asknetic%20Group,%20I%20would%20like%20to%20inquire%20about%20your%20services." 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20ba5a] text-white p-4 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-green-300 group"
+   aria-label="Chat with us on WhatsApp">
+  <i class="fa-brands fa-whatsapp text-3xl"></i>
+  <span class="absolute right-full mr-3 bg-slate-900 text-white text-xs font-semibold px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-md">
+    Chat with us on WhatsApp
+  </span>
+</a>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var footerYear = document.getElementById('footer-year');
+    if (footerYear) {
+      footerYear.textContent = new Date().getFullYear();
+    }
+
+    var siteHeader = document.getElementById('site-header');
+    if (siteHeader) {
+      var handleHeaderScroll = function () {
+        if (window.scrollY > 20) {
+          siteHeader.classList.add('bg-white/10', 'backdrop-blur-xl', 'border-b', 'border-white/10', 'shadow-lg');
+        } else {
+          siteHeader.classList.remove('bg-white/10', 'backdrop-blur-xl', 'border-b', 'border-white/10', 'shadow-lg');
+        }
+      };
+      handleHeaderScroll();
+      window.addEventListener('scroll', handleHeaderScroll, { passive: true });
+    }
+ 
+    var toggle = document.getElementById('navtoggle');
+    var toggleIcon = document.getElementById('navtoggle-icon');
+    var mobileMenu = document.getElementById('mobilemenu');
+ 
+    if (toggle && mobileMenu) {
+      toggle.addEventListener('click', function () {
+        mobileMenu.classList.toggle('hidden');
+        var isOpen = !mobileMenu.classList.contains('hidden');
+        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        if (toggleIcon) {
+          toggleIcon.className = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+        }
+      });
+ 
+      mobileMenu.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          mobileMenu.classList.add('hidden');
+          toggle.setAttribute('aria-expanded', 'false');
+          if (toggleIcon) {
+            toggleIcon.className = 'fa-solid fa-bars';
+          }
+        });
+      });
+    }
+ 
+    var sectorsBtn = document.getElementById('sectorsBtn');
+    var sectorsMenu = document.getElementById('sectorsMenu');
+    var sectorsArrow = document.getElementById('sectorsArrow');
+    var sectorsWrap = sectorsBtn ? sectorsBtn.closest('li') : null;
+    var sectorsCloseTimer = null;
+ 
+    function openSectors() {
+      clearTimeout(sectorsCloseTimer);
+      sectorsMenu.classList.remove('hidden');
+      sectorsBtn.setAttribute('aria-expanded', 'true');
+      if (sectorsArrow) sectorsArrow.classList.add('rotate-180');
+    }
+ 
+    function closeSectorsDelayed() {
+      clearTimeout(sectorsCloseTimer);
+      sectorsCloseTimer = setTimeout(function () {
+        sectorsMenu.classList.add('hidden');
+        sectorsBtn.setAttribute('aria-expanded', 'false');
+        if (sectorsArrow) sectorsArrow.classList.remove('rotate-180');
+      }, 150);
+    }
+ 
+    if (sectorsWrap && sectorsBtn && sectorsMenu) {
+      sectorsWrap.addEventListener('mouseenter', openSectors);
+      sectorsWrap.addEventListener('mouseleave', closeSectorsDelayed);
+ 
+      sectorsBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var isOpen = !sectorsMenu.classList.contains('hidden');
+        if (isOpen) {
+          sectorsMenu.classList.add('hidden');
+          sectorsBtn.setAttribute('aria-expanded', 'false');
+          if (sectorsArrow) sectorsArrow.classList.remove('rotate-180');
+        } else {
+          openSectors();
+        }
+      });
+ 
+      document.addEventListener('click', function (e) {
+        if (!sectorsMenu.contains(e.target) && !sectorsBtn.contains(e.target)) {
+          sectorsMenu.classList.add('hidden');
+          sectorsBtn.setAttribute('aria-expanded', 'false');
+          if (sectorsArrow) sectorsArrow.classList.remove('rotate-180');
+        }
+      });
+ 
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && !sectorsMenu.classList.contains('hidden')) {
+          sectorsMenu.classList.add('hidden');
+          sectorsBtn.setAttribute('aria-expanded', 'false');
+          if (sectorsArrow) sectorsArrow.classList.remove('rotate-180');
+          sectorsBtn.focus();
+        }
+      });
+    }
+ 
+    var mobileSectorsBtn = document.getElementById('mobileSectorsBtn');
+    var mobileSectorsMenu = document.getElementById('mobileSectorsMenu');
+    var mobileSectorsArrow = document.getElementById('mobileSectorsArrow');
+ 
+    if (mobileSectorsBtn && mobileSectorsMenu) {
+      mobileSectorsBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        mobileSectorsMenu.classList.toggle('hidden');
+        var isOpen = !mobileSectorsMenu.classList.contains('hidden');
+        mobileSectorsBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        if (mobileSectorsArrow) {
+          mobileSectorsArrow.classList.toggle('rotate-180', isOpen);
+        }
+      });
+    }
+  });
+</script>
+
+<script>
+  (function () {
+    var items = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+    if (!items.length) return;
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+      items.forEach(function (el) { el.classList.add('active'); });
+      return;
+    }
+
+    var counts = new Map();
+    items.forEach(function (el) {
+      var n = counts.get(el.parentElement) || 0;
+      el._revealIndex = n;
+      counts.set(el.parentElement, n + 1);
+    });
+
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var el = entry.target;
+        io.unobserve(el);
+
+        var delay = (el._revealIndex % 3) * 100;
+        el.style.setProperty('--d', delay + 'ms');
+        el.classList.add('active');
+
+        setTimeout(function () {
+          el.classList.remove('reveal', 'reveal-left', 'reveal-right', 'reveal-scale', 'active');
+          el.style.removeProperty('--d');
+        }, 900 + delay);
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    items.forEach(function (el) { io.observe(el); });
+  })();
+</script>
+
+<script>
+  (function () {
+    var btn = document.getElementById('backToTop');
+    if (!btn) return;
+
+    function toggleBtn() {
+      btn.classList.toggle('show', window.scrollY > 400);
+    }
+    toggleBtn();
+    window.addEventListener('scroll', toggleBtn, { passive: true });
+
+    btn.addEventListener('click', function () {
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+    });
+  })();
+</script>
+
+</body>
+</html>
