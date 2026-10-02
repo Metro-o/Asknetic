@@ -1,327 +1,564 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Services - Asknetic Enterprises Ltd</title>
-  
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            cream: '#FAFAFA',
-            navy: '#0F172A',
-            ink: '#1E293B',
-            inksoft: '#64748B',
-            flame: '#F97316',
-            flamedeep: '#EA580C',
-          },
-          boxShadow: {
-            card: '0 10px 30px -5px rgba(0, 0, 0, 0.05)',
-          }
+  <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Services | Asknetic Group</title>
+<meta name="description" content="Asknetic Enterprises Ltd — a diversified group of companies based in Dar es Salaam, Tanzania, working across ICT, real estate, agro crop, building maintenance, car hire, travel & visa assistance, and general supplies.">
+<link rel="canonical" href="https://www.askneticgroup.co.tz/services.html">
+<meta property="og:title" content="Our Services | Asknetic Group">
+<meta property="og:description" content="A diversified group of companies based in Dar es Salaam, Tanzania, working across ICT, real estate, agro crop, building maintenance, car hire, travel & visa assistance, and general supplies.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.askneticgroup.co.tz/services.html">
+<link rel="icon" type="image/png" href="../image-icons/ask-logo%20white.png">
+<link rel="icon" href="../image-icons/favicon.ico" sizes="any">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#181411',
+          inksoft: '#645A52',
+          paper: '#FFFFFF',
+          cream: '#FBF7F1',
+          flame: '#E17A2E',
+          flame2: '#F4A05C',
+          flamedeep: '#B85A18',
+          navy: '#211C18',
+        },
+        fontFamily: {
+          display: ['Outfit', 'sans-serif'],
+          sans: ['Inter', 'sans-serif'],
+        },
+        boxShadow: {
+          soft: '0 20px 50px -20px rgba(24,20,17,0.25)',
+          card: '0 10px 30px -10px rgba(24,20,17,0.12)',
         }
       }
     }
-  </script>
-  
-  <!-- FontAwesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
-<body class="bg-cream text-ink font-sans antialiased selection:bg-flame selection:text-white">
+  }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" crossorigin="anonymous" defer></script>
 
-  <!-- ================= HERO SECTION ================= -->
-  <section class="relative bg-navy text-white py-24 md:py-32 overflow-hidden">
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-slate-800 via-navy to-black opacity-80"></div>
-    
-    <div class="relative max-w-7xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24 text-center">
-      <span class="text-xs font-bold tracking-widest uppercase text-flame bg-flame/10 px-4 py-1.5 rounded-full inline-block mb-4 border border-flame/20">
-        Asknetic Group Solutions
-      </span>
-      <h1 class="font-display font-extrabold text-4xl md:text-6xl tracking-tight mb-6 leading-tight">
-        Seven Sectors. <br class="hidden sm:inline"><span class="text-flame">One Standard of Excellence.</span>
-      </h1>
-      <p class="text-slate-300 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-8">
-        Delivering dependable, high-tier business services across Tanzania mainland and Zanzibar—from enterprise technology and real estate to agro exports and logistics.
-      </p>
+<style>
+  html{scroll-behavior:smooth;}
+  body{-webkit-font-smoothing:antialiased;}
+  ::selection{background:#E17A2E;color:#fff;}
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+  }
+  @keyframes floatDelayed {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(8px); }
+  }
+  .animate-float { animation: float 4s ease-in-out infinite; }
+  .animate-float-delayed { animation: floatDelayed 5s ease-in-out infinite; }
+
+  html .reveal, html .reveal-left, html .reveal-right, html .reveal-scale{
+    opacity:0;
+    transition:opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1);
+    transition-delay:var(--d,0ms);
+    will-change:opacity,transform;
+  }
+  html .reveal{transform:translateY(32px);}
+  html .reveal-left{transform:translateX(-40px);}
+  html .reveal-right{transform:translateX(40px);}
+  html .reveal-scale{transform:scale(.92);}
+  html .reveal.active, html .reveal-left.active, html .reveal-right.active, html .reveal-scale.active{
+    opacity:1;transform:none;
+  }
+
+  @keyframes scrollDot {
+    0% { transform: translateY(0); opacity: 1; }
+    70% { transform: translateY(14px); opacity: 0.3; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+  .animate-scrollDot{ animation: scrollDot 1.6s ease-in-out infinite; }
+
+  #backToTop{
+    opacity:0;
+    transform:translateY(16px);
+    pointer-events:none;
+    transition:opacity .3s ease, transform .3s ease, background-color .2s ease;
+  }
+  #backToTop.show{opacity:1;transform:none;pointer-events:auto;}
+  #backToTop.show:hover{transform:translateY(-3px);}
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{transition:none!important;}
+    html .reveal, html .reveal-left, html .reveal-right, html .reveal-scale{opacity:1;transform:none;}
+  }
+  .orbit-ring{animation:orbitSpin 40s linear infinite;}
+  .orbit-badge{position:absolute;top:0;left:50%;margin-left:-28px;width:56px;height:56px;animation:orbitCounter 40s linear infinite;}
+  .orbit:hover .orbit-ring,.orbit:hover .orbit-badge,.orbit:focus-within .orbit-ring,.orbit:focus-within .orbit-badge{animation-play-state:paused;}
+  @keyframes orbitSpin{to{transform:rotate(360deg);}}
+  @keyframes orbitCounter{from{transform:rotate(calc(var(--a) * -1));}to{transform:rotate(calc(var(--a) * -1 - 360deg));}}
+  @media (prefers-reduced-motion:reduce){.orbit-ring{animation:none;}.orbit-badge{animation:none;transform:rotate(calc(var(--a) * -1));}}
+</style>
+<noscript><style>html .reveal,html .reveal-left,html .reveal-right,html .reveal-scale{opacity:1!important;transform:none!important;}</style></noscript>
+</head>
+<body class="bg-cream text-ink font-sans antialiased overflow-x-hidden w-full">
+
+<!-- HEADER -->
+<header id="site-header" class="fixed top-0 inset-x-0 z-50 w-full bg-white/90 backdrop-blur-xl shadow-card">
+  <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 py-3 w-full">
+  
+  <a href="index.html" class="flex items-center gap-2.5 shrink-0 focus:outline-none">
+    <img src="../image-icons/ask-logo%20white.png" alt="Asknetic Group Logo" class="h-16 w-auto max-w-full object-contain transition-transform duration-200 hover:scale-105">
+  </a>
+ 
+  <ul id="navlinks" class="hidden lg:flex items-center gap-8 list-none m-0 p-0">
+    <li>
+      <a href="index.html" class="text-base font-semibold text-black hover:text-flame transition-colors py-1">Home</a>
+    </li>
+    <li>
+      <a href="about-us.html" class="text-base font-semibold text-black hover:text-flame transition-colors py-1">About Us</a>
+    </li>
+    <li class="relative group">
+      <button id="sectorsBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="sectorsMenu" class="flex items-center gap-1.5 text-base font-semibold text-flame hover:text-flamedeep transition-colors py-1 border-b-2 border-flame focus:outline-none">
+        <span>Services</span>
+        <i id="sectorsArrow" class="fa-solid fa-chevron-down text-[10px] transition-transform duration-200"></i>
+      </button>
       
-      <div class="flex flex-wrap justify-center gap-4">
-        <a href="#services-grid" class="px-8 py-4 bg-flame hover:bg-flamedeep text-white font-bold rounded-xl shadow-lg shadow-orange-500/20 transition-all duration-300 transform hover:-translate-y-0.5">
-          Explore All Services
+      <!-- Fixed Hover Gap with Padding Bridge -->
+      <div id="sectorsMenu" class="hidden absolute top-full left-1/2 -translate-x-1/2 pt-2 w-64 z-50">
+        <div class="bg-navy/95 backdrop-blur-xl border border-white/10 rounded-2xl p-2.5 flex flex-col gap-1 shadow-2xl">
+          <a href="services.html#ict" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">ICT Solutions</a>
+          <a href="services.html#real-estate" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">Real Estate</a>
+          <a href="services.html#agro" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">Agro Crops</a>
+          <a href="services.html#maintenance" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">Building Maintenance</a>
+          <a href="services.html#car-hire" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">Car Hire</a>
+          <a href="services.html#travel" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">Travel & Visa Assistance</a>
+          <a href="services.html#supplies" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">General Supplies</a>
+        <div class="my-1 border-t border-white/10"></div>
+        <a href="services.html" class="px-3 py-2 rounded-xl text-xs font-semibold text-flame hover:bg-flame/10 hover:text-flamedeep transition-all">
+          <span>View All Services</span>
+          <i class="fa-solid fa-arrow-right text-xs ml-1"></i>
         </a>
-        <a href="contact.html" class="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl border border-white/20 backdrop-blur-sm transition-all duration-300">
-          Request Quotation
-        </a>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="contact.html" class="text-base font-semibold text-black hover:text-flame transition-colors py-1">Contact Us</a>
+    </li>
+  </ul>
+ 
+  <a href="contact.html" class="hidden lg:inline-flex items-center gap-2 bg-flamedeep hover:bg-flame text-white px-6 py-2.5 rounded-full text-base font-semibold transition-all shadow-md hover:shadow-xl hover:-translate-y-0.5 shrink-0 shadow-flamedeep focus:outline-none focus:ring-2 focus:ring-flame focus:ring-offset-2">
+    <span>Get in Touch</span>
+    <i class="fa-solid fa-arrow-right text-xs ml-1"></i>
+  </a>
+   
+    <button id="navtoggle" type="button" class="lg:hidden w-10 h-10 rounded-full hover:bg-flame/10 flex items-center justify-center text-flame transition-colors focus:outline-none" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobilemenu">
+      <i class="fa-solid fa-bars" id="navtoggle-icon"></i>
+    </button>
+</nav>
+ 
+<div id="mobilemenu" class="hidden lg:hidden mx-4 mt-2 rounded-2xl bg-navy/95 backdrop-blur-xl border border-white/20 shadow-2xl px-6 py-4">
+  <a href="index.html" class="block py-3 border-b border-white/10 text-base font-semibold text-white hover:text-flame transition-colors">Home</a>
+  <a href="about-us.html" class="block py-3 border-b border-white/10 text-base font-semibold text-white hover:text-flame transition-colors">About Us</a>
+  
+  <div class="border-b border-white/10 py-3">
+    <button id="mobileSectorsBtn" type="button" aria-expanded="false" aria-controls="mobileSectorsMenu" class="flex items-center justify-between w-full text-base font-semibold text-white hover:text-flame transition-colors focus:outline-none">
+      <span>Services</span>
+      <i id="mobileSectorsArrow" class="fa-solid fa-chevron-down text-xs transition-transform duration-200"></i>
+    </button>
+    
+    <div id="mobileSectorsMenu" class="hidden pl-4 pt-4 flex flex-col gap-3 text-sm">
+      <a href="services.html#ict" class="text-white/80 hover:text-flame transition-colors">ICT Solutions</a>
+      <a href="services.html#real-estate" class="text-white/80 hover:text-flame transition-colors">Real Estate</a>
+      <a href="services.html#agro" class="text-white/80 hover:text-flame transition-colors">Agro Crops</a>
+      <a href="services.html#maintenance" class="text-white/80 hover:text-flame transition-colors">Building Maintenance</a>
+      <a href="services.html#car-hire" class="text-white/80 hover:text-flame transition-colors">Car Hire</a>
+      <a href="services.html#travel" class="text-white/80 hover:text-flame transition-colors">Travel & Visa Assistance</a>
+      <a href="services.html#supplies" class="text-white/80 hover:text-flame transition-colors">General Supplies</a>
+    </div>
+  </div>
+ 
+  <a href="contact.html" class="block py-3 border-b border-white/10 text-base font-semibold text-white hover:text-flame transition-colors">Contact Us</a>
+  
+  <div class="pt-5 pb-2">
+    <a href="contact.html" class="flex items-center justify-center w-full bg-flame text-white py-3 rounded-full text-base font-semibold hover:bg-flamedeep transition-colors shadow-2xl shadow-amber-400">
+      Get in Touch
+    </a>
+  </div>
+</div>
+</header>
+
+<main>
+  <section class="relative isolate overflow-hidden bg-slate-900 bg-cover bg-center bg-no-repeat pt-36 pb-14 md:pt-44 md:pb-20" style="background-image: url('../image-icons/office-corporate.webp');">
+  <!-- Overlay to ensure text readability -->
+  <div class="absolute inset-0 bg-slate-950/70"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24 grid lg:grid-cols-2 gap-12 items-center">
+    <div>
+      <h1 class="reveal font-display font-extrabold text-4xl md:text-6xl leading-[1.08] text-white">Seven services from one company in Dar es Salaam</h1>
+      <p class="reveal text-slate-200 text-lg md:text-xl leading-relaxed max-w-xl mt-6" style="--d:100ms">Asknetic Enterprises Ltd works across ICT, property, agriculture, maintenance, transport, travel and supplies. Choose a service below, or contact us and we will point you to the right team.</p>
+      <div class="reveal flex flex-wrap gap-3 mt-10" style="--d:200ms">
+        <a href="#ict" class="px-4 py-2 rounded-full border border-white/20 bg-white/90 text-slate-900 text-sm font-medium hover:bg-flame hover:text-white transition-colors">ICT & Digital Solutions</a>
+        <a href="#real-estate" class="px-4 py-2 rounded-full border border-white/20 bg-white/90 text-slate-900 text-sm font-medium hover:bg-flame hover:text-white transition-colors">Real Estate Management</a>
+        <a href="#agro" class="px-4 py-2 rounded-full border border-white/20 bg-white/90 text-slate-900 text-sm font-medium hover:bg-flame hover:text-white transition-colors">Agro Crop Trading</a>
+        <a href="#maintenance" class="px-4 py-2 rounded-full border border-white/20 bg-white/90 text-slate-900 text-sm font-medium hover:bg-flame hover:text-white transition-colors">Building Maintenance</a>
+        <a href="#car-hire" class="px-4 py-2 rounded-full border border-white/20 bg-white/90 text-slate-900 text-sm font-medium hover:bg-flame hover:text-white transition-colors">Car Hire & Logistics</a>
+        <a href="#travel" class="px-4 py-2 rounded-full border border-white/20 bg-white/90 text-slate-900 text-sm font-medium hover:bg-flame hover:text-white transition-colors">Travel & Visa Assistance</a>
+        <a href="#supplies" class="px-4 py-2 rounded-full border border-white/20 bg-white/90 text-slate-900 text-sm font-medium hover:bg-flame hover:text-white transition-colors">General Supplies & Services</a>
       </div>
     </div>
-  </section>
-
-  <!-- ================= SERVICES FILTER & GRID ================= -->
-  <section id="services-grid" class="py-20 md:py-28 bg-cream">
-    <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24">
-      
-      <!-- Filter Controls -->
-      <div class="flex items-center justify-center mb-12 overflow-x-auto pb-4 no-scrollbar">
-        <div class="inline-flex bg-slate-200/60 p-1.5 rounded-2xl gap-2 backdrop-blur-sm">
-          <button class="filter-btn active px-5 py-2.5 rounded-xl font-bold text-sm transition-all bg-flame text-white shadow-sm" data-category="all">
-            All Services (7)
-          </button>
-          <button class="filter-btn px-5 py-2.5 rounded-xl font-medium text-sm text-inksoft hover:text-ink transition-all" data-category="tech">
-            Tech & Digital
-          </button>
-          <button class="filter-btn px-5 py-2.5 rounded-xl font-medium text-sm text-inksoft hover:text-ink transition-all" data-category="property">
-            Property & Maintenance
-          </button>
-          <button class="filter-btn px-5 py-2.5 rounded-xl font-medium text-sm text-inksoft hover:text-ink transition-all" data-category="trade">
-            Trade & Mobility
-          </button>
-        </div>
-      </div>
-
-      <!-- Services Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        
-        <!-- Service 1: ICT & Digital Solutions -->
-        <div class="service-card bg-white p-8 md:p-10 rounded-3xl border border-slate-200/80 shadow-card hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="tech">
-          <div>
-            <div class="w-14 h-14 bg-orange-100 text-flame rounded-2xl flex items-center justify-center text-2xl mb-6">
-              <i class="fa-solid fa-laptop-code"></i>
-            </div>
-            <span class="text-xs font-bold tracking-wider uppercase text-flamedeep">01. Digital Infrastructure</span>
-            <h3 class="font-display font-bold text-2xl text-ink mt-1 mb-4">ICT & Digital Solutions</h3>
-            <p class="text-inksoft leading-relaxed mb-6">
-              End-to-end technology solutions empowering organizations to scale securely. We handle modern enterprise networks, software integration, and digital transformation strategy.
-            </p>
-            <ul class="space-y-3 mb-8 text-sm text-slate-700">
-              <li class="flex items-center gap-3">
-                <i class="fa-solid fa-circle-check text-flame"></i> Enterprise Network & IT Infrastructure Setup
-              </li>
-              <li class="flex items-center gap-3">
-                <i class="fa-solid fa-circle-check text-flame"></i> Web & Custom Software Development
-              </li>
-              <li class="flex items-center gap-3">
-                <i class="fa-solid fa-circle-check text-flame"></i> Cybersecurity & Cloud Migration Services
-              </li>
-            </ul>
+    
+    <!-- ORBIT SLOT: logo in the centre, one rotating badge per service -->
+    <div class="reveal-scale w-full max-w-md mx-auto" style="--d:150ms">
+      <div class="orbit relative w-full aspect-square">
+        <div class="absolute rounded-full border border-dashed border-white/30" style="inset:28px"></div>
+        <div class="orbit-ring absolute inset-0">
+          <div class="absolute inset-0" style="transform:rotate(0.0deg)">
+            <a href="#ict" title="ICT & Digital Solutions" aria-label="ICT & Digital Solutions" class="orbit-badge" style="--a:0.0deg">
+              <span class="flex w-14 h-14 rounded-full bg-white border border-slate-200 shadow-card text-flame text-lg items-center justify-center hover:bg-flame hover:text-white transition-colors"><i class="fa-solid fa-laptop-code"></i></span>
+            </a>
           </div>
-          <a href="contact.html?service=ict" class="inline-flex items-center gap-2 font-bold text-flame hover:text-flamedeep transition-colors">
-            Inquire About ICT Solutions <i class="fa-solid fa-arrow-right text-xs"></i>
-          </a>
-        </div>
-
-        <!-- Service 2: Real Estate -->
-        <div class="service-card bg-white p-8 md:p-10 rounded-3xl border border-slate-200/80 shadow-card hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="property">
-          <div>
-            <div class="w-14 h-14 bg-orange-100 text-flame rounded-2xl flex items-center justify-center text-2xl mb-6">
-              <i class="fa-solid fa-building"></i>
-            </div>
-            <span class="text-xs font-bold tracking-wider uppercase text-flamedeep">02. Property & Asset Management</span>
-            <h3 class="font-display font-bold text-2xl text-ink mt-1 mb-4">Real Estate Solutions</h3>
-            <p class="text-inksoft leading-relaxed mb-6">
-              Comprehensive real estate solutions across Tanzania. We support clients through property acquisition, leasing, management, and commercial space developments.
-            </p>
-            <ul class="space-y-3 mb-8 text-sm text-slate-700">
-              <li class="flex items-center gap-3">
-                <i class="fa-solid fa-circle-check text-flame"></i> Commercial & Residential Property Brokerage
-              </li>
-              <li class="flex items-center gap-3">
-                <i class="fa-solid fa-circle-check text-flame"></i> Property Management & Tenant Administration
-              </li>
-              <li class="flex items-center gap-3">
-                <i class="fa-solid fa-circle-check text-flame"></i> Land Acquisition & Investment Consulting
-              </li>
-            </ul>
+          <div class="absolute inset-0" style="transform:rotate(51.43deg)">
+            <a href="#real-estate" title="Real Estate Management" aria-label="Real Estate Management" class="orbit-badge" style="--a:51.43deg">
+              <span class="flex w-14 h-14 rounded-full bg-white border border-slate-200 shadow-card text-flame text-lg items-center justify-center hover:bg-flame hover:text-white transition-colors"><i class="fa-solid fa-building"></i></span>
+            </a>
           </div>
-          <a href="contact.html?service=realestate" class="inline-flex items-center gap-2 font-bold text-flame hover:text-flamedeep transition-colors">
-            Inquire About Real Estate <i class="fa-solid fa-arrow-right text-xs"></i>
-          </a>
-        </div>
-
-        <!-- Service 3: Agro Crop -->
-        <div class="service-card bg-white p-8 md:p-10 rounded-3xl border border-slate-200/80 shadow-card hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="trade">
-          <div>
-            <div class="w-14 h-14 bg-orange-100 text-flame rounded-2xl flex items-center justify-center text-2xl mb-6">
-              <i class="fa-solid fa-wheat-stroke"></i>
-            </div>
-            <span class="text-xs font-bold tracking-wider uppercase text-flamedeep">03. Agriculture & Supply Chain</span>
-            <h3 class="font-display font-bold text-2xl text-ink mt-1 mb-4">Agro Crop Sourcing & Export</h3>
-            <p class="text-inksoft leading-relaxed mb-6">
-              Connecting Tanzanian agricultural produce directly to regional and international markets with strict quality assurance and streamlined logistics.
-            </p>
-            <ul class="space-y-3 mb-8 text-sm text-slate-700">
-              <li class="flex items-center gap-3">
-                <i class="fa-solid fa-circle-check text-flame"></i> Bulk Agricultural Commodity Sourcing
-              </li>
-              <li class="flex items-center gap-3">
-                <i class="fa-solid fa-circle-check text-flame"></i> Quality Inspection & Export Packaging
-              </li>
-              <li class="flex items-center gap-3">
-                <i class="fa-solid fa-circle-check text-flame"></i> Cross-Border Logistics Management
-              </li>
-            </ul>
+          <div class="absolute inset-0" style="transform:rotate(102.86deg)">
+            <a href="#agro" title="Agro Crop Trading" aria-label="Agro Crop Trading" class="orbit-badge" style="--a:102.86deg">
+              <span class="flex w-14 h-14 rounded-full bg-white border border-slate-200 shadow-card text-flame text-lg items-center justify-center hover:bg-flame hover:text-white transition-colors"><i class="fa-solid fa-seedling"></i></span>
+            </a>
           </div>
-          <a href="contact.html?service=agrocrop" class="inline-flex items-center gap-2 font-bold text-flame hover:text-flamedeep transition-colors">
-            Inquire About Agro Exports <i class="fa-solid fa-arrow-right text-xs"></i>
-          </a>
-        </div>
-
-        <!-- Service 4: Building Maintenance -->
-        <div class="service-card bg-white p-8 md:p-10 rounded-3xl border border-slate-200/80 shadow-card hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="property">
-          <div>
-            <div class="w-14 h-14 bg-orange-100 text-flame rounded-2xl flex items-center justify-center text-2xl mb-6">
-              <i class="fa-solid fa-screwdriver-wrench"></i>
-            </div>
-            <span class="text-xs font-bold tracking-wider uppercase text-flamedeep">04. Facility Services</span>
-            <h3 class="font-display font-bold text-2xl text-ink mt-1 mb-4">Building Maintenance</h3>
-            <p class="text-inksoft leading-relaxed mb-6">
-              Keeping corporate assets operating safely and smoothly. Routine preventative care, rapid structural repairs, electrical, and HVAC maintenance services.
-            </p>
-            <ul class="space-y-3 mb-8 text-sm text-slate-700">
-              <li class="flex items-center gap-3">
-                <i class="fa-solid fa-circle-check text-flame"></i> Scheduled Preventive Facility Inspections
-              </li>
-              <li class="flex items-center gap-3">
-                <i class="fa-solid fa-circle-check text-flame"></i> Electrical, Plumbing & Civil Repairs
-              </li>
-              <li class="flex items-center gap-3">
-                <i class="fa-solid fa-circle-check text-flame"></i> HVAC & Refrigeration Servicing
-              </li>
-            </ul>
+          <div class="absolute inset-0" style="transform:rotate(154.29deg)">
+            <a href="#maintenance" title="Building Maintenance" aria-label="Building Maintenance" class="orbit-badge" style="--a:154.29deg">
+              <span class="flex w-14 h-14 rounded-full bg-white border border-slate-200 shadow-card text-flame text-lg items-center justify-center hover:bg-flame hover:text-white transition-colors"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+            </a>
           </div>
-          <a href="contact.html?service=maintenance" class="inline-flex items-center gap-2 font-bold text-flame hover:text-flamedeep transition-colors">
-            Inquire About Maintenance <i class="fa-solid fa-arrow-right text-xs"></i>
-          </a>
-        </div>
-
-        <!-- Service 5: Car Hire -->
-        <div class="service-card bg-white p-8 md:p-10 rounded-3xl border border-slate-200/80 shadow-card hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="trade">
-          <div>
-            <div class="w-14 h-14 bg-orange-100 text-flame rounded-2xl flex items-center justify-center text-2xl mb-6">
-              <i class="fa-solid fa-car"></i>
-            </div>
-            <span class="text-xs font-bold tracking-wider uppercase text-flamedeep">05. Mobility & Fleet</span>
-            <h3 class="font-display font-bold text-2xl text-ink mt-1 mb-4">Car Hire & Logistics</h3>
-            <p class="text-inksoft leading-relaxed mb-6">
-              Reliable, well-maintained executive and operational vehicles available for short-term rental or long-term corporate leasing across Mainland and Zanzibar.
-            </p>
-            <ul class="space-y-3 mb-8 text-sm text-slate-700">
-              <li class="flex items-center gap-3">
-                <i class="fa-solid fa-circle-check text-flame"></i> Corporate Fleet Rental & Airport Transfers
-              </li>
-              <li class="flex items-center gap-3">
-                <i class="fa-solid fa-circle-check text-flame"></i> Chauffeur & Self-Drive Options
-              </li>
-              <li class="flex items-center gap-3">
-                <i class="fa-solid fa-circle-check text-flame"></i> Coverage Across Tanzania & Zanzibar
-              </li>
-            </ul>
+          <div class="absolute inset-0" style="transform:rotate(205.71deg)">
+            <a href="#car-hire" title="Car Hire & Logistics" aria-label="Car Hire & Logistics" class="orbit-badge" style="--a:205.71deg">
+              <span class="flex w-14 h-14 rounded-full bg-white border border-slate-200 shadow-card text-flame text-lg items-center justify-center hover:bg-flame hover:text-white transition-colors"><i class="fa-solid fa-car-side"></i></span>
+            </a>
           </div>
-          <a href="contact.html?service=carhire" class="inline-flex items-center gap-2 font-bold text-flame hover:text-flamedeep transition-colors">
-            Inquire About Fleet Hire <i class="fa-solid fa-arrow-right text-xs"></i>
-          </a>
-        </div>
-
-        <!-- Service 6: Travel & Visa Assistance -->
-        <div class="service-card bg-white p-8 md:p-10 rounded-3xl border border-slate-200/80 shadow-card hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="trade">
-          <div>
-            <div class="w-14 h-14 bg-orange-100 text-flame rounded-2xl flex items-center justify-center text-2xl mb-6">
-              <i class="fa-solid fa-plane-departure"></i>
-            </div>
-            <span class="text-xs font-bold tracking-wider uppercase text-flamedeep">06. Global Mobility</span>
-            <h3 class="font-display font-bold text-2xl text-ink mt-1 mb-4">Travel & Visa Assistance</h3>
-            <p class="text-inksoft leading-relaxed mb-6">
-              Removing administrative friction for international business travelers and tourists with hassle-free visa processing, itineraries, and flight bookings.
-            </p>
-            <ul class="space-y-3 mb-8 text-sm text-slate-700">
-              <li class="flex items-center gap-3">
-                <i class="fa-solid fa-circle-check text-flame"></i> Business & Work Visa Guidance
-              </li>
-              <li class="flex items-center gap-3">
-                <i class="fa-solid fa-circle-check text-flame"></i> Flight Reservations & Ticketing
-              </li>
-              <li class="flex items-center gap-3">
-                <i class="fa-solid fa-circle-check text-flame"></i> Custom Itinerary Planning
-              </li>
-            </ul>
+          <div class="absolute inset-0" style="transform:rotate(257.14deg)">
+            <a href="#travel" title="Travel & Visa Assistance" aria-label="Travel & Visa Assistance" class="orbit-badge" style="--a:257.14deg">
+              <span class="flex w-14 h-14 rounded-full bg-white border border-slate-200 shadow-card text-flame text-lg items-center justify-center hover:bg-flame hover:text-white transition-colors"><i class="fa-solid fa-passport"></i></span>
+            </a>
           </div>
-          <a href="contact.html?service=travel" class="inline-flex items-center gap-2 font-bold text-flame hover:text-flamedeep transition-colors">
-            Inquire About Travel Care <i class="fa-solid fa-arrow-right text-xs"></i>
-          </a>
-        </div>
-
-        <!-- Service 7: General Supplies -->
-        <div class="service-card md:col-span-2 bg-gradient-to-br from-navy to-slate-900 text-white p-8 md:p-12 rounded-3xl shadow-xl flex flex-col md:flex-row gap-8 items-center justify-between" data-category="tech">
-          <div class="max-w-2xl">
-            <div class="w-14 h-14 bg-flame/20 text-flame rounded-2xl flex items-center justify-center text-2xl mb-6 border border-flame/30">
-              <i class="fa-solid fa-boxes-packing"></i>
-            </div>
-            <span class="text-xs font-bold tracking-wider uppercase text-flame">07. Procurement Solutions</span>
-            <h3 class="font-display font-bold text-2xl md:text-3xl text-white mt-1 mb-4">General Procurement & Supplies</h3>
-            <p class="text-slate-300 leading-relaxed mb-6">
-              Trusted corporate procurement partner for institutional equipment, office essentials, and specialized industrial supplies across public and private sectors.
-            </p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-300">
-              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-flame"></i> Corporate Office Supplies</div>
-              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-flame"></i> Industrial Hardware & Gear</div>
-              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-flame"></i> IT Hardware Procurement</div>
-              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-flame"></i> Bulk B2B Sourcing Contracts</div>
-            </div>
-          </div>
-          <div class="w-full md:w-auto">
-            <a href="contact.html?service=supplies" class="w-full md:w-auto text-center block px-8 py-4 bg-flame hover:bg-flamedeep text-white font-bold rounded-xl transition-all shadow-lg shadow-orange-500/20 whitespace-nowrap">
-              Submit Supply RFQ
+          <div class="absolute inset-0" style="transform:rotate(308.57deg)">
+            <a href="#supplies" title="General Supplies & Services" aria-label="General Supplies & Services" class="orbit-badge" style="--a:308.57deg">
+              <span class="flex w-14 h-14 rounded-full bg-white border border-slate-200 shadow-card text-flame text-lg items-center justify-center hover:bg-flame hover:text-white transition-colors"><i class="fa-solid fa-boxes-stacked"></i></span>
             </a>
           </div>
         </div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[38%] aspect-square rounded-full bg-white/95 shadow-soft flex items-center justify-center">
+          <img src="../image-icons/ask-logo%20white.png" alt="Asknetic Group" class="w-3/5 h-auto object-contain">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+  <section id="ict" class="scroll-mt-24 bg-white border-t border-ink/10 py-14 md:py-20">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24 grid lg:grid-cols-12 gap-8 lg:gap-12">
+      <div class="reveal lg:col-span-5 flex items-start gap-5">
+        <span class="w-14 h-14 shrink-0 rounded-xl bg-flame text-white flex items-center justify-center text-xl"><i class="fa-solid fa-laptop-code"></i></span>
+        <h2 class="font-display font-bold text-2xl md:text-3xl leading-tight pt-1">ICT & Digital Solutions</h2>
+      </div>
+      <div class="reveal lg:col-span-5 lg:row-start-2 aspect-[4/3] rounded-2xl overflow-hidden bg-flame/10 border border-ink/10">
+        <img src="../image-icons/ict-digital-solutions.webp" alt="ICT & Digital Solutions" loading="lazy" class="w-full h-full object-cover" onerror="this.style.display='none'">
+      </div>
+      <div class="reveal lg:col-span-7 lg:row-span-2 lg:row-start-1 lg:col-start-6" style="--d:100ms">
+        <p class="text-inksoft text-lg leading-relaxed max-w-xl mb-6">Software, websites and IT support for organisations that need their systems to work reliably.</p>
+        <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-3 mb-8 text-[15px]"><li class="flex items-start gap-3"><i class="fa-solid fa-check text-flame mt-1 text-xs"></i><span>Website and web application development</span></li><li class="flex items-start gap-3"><i class="fa-solid fa-check text-flame mt-1 text-xs"></i><span>Custom business software</span></li><li class="flex items-start gap-3"><i class="fa-solid fa-check text-flame mt-1 text-xs"></i><span>Hardware supply and network setup</span></li><li class="flex items-start gap-3"><i class="fa-solid fa-check text-flame mt-1 text-xs"></i><span>IT support and maintenance</span></li></ul>
+        <a href="contact.html" class="inline-flex items-center gap-2 bg-flamedeep hover:bg-flame text-white px-6 py-3 rounded-full text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-flame focus:ring-offset-2">Enquire about this service<i class="fa-solid fa-arrow-right text-xs"></i></a>
       </div>
     </div>
   </section>
-
-  <!-- ================= CTA BANNER ================= -->
-  <section class="py-20 bg-white border-t border-slate-100">
-    <div class="max-w-5xl mx-auto px-6 text-center">
-      <h2 class="font-display font-bold text-3xl md:text-4xl text-ink mb-4">Ready to elevate your operational capabilities?</h2>
-      <p class="text-inksoft text-lg max-w-2xl mx-auto mb-8">Get in touch with our expert management team today to receive a customized quote for your organization.</p>
-      <a href="contact.html" class="inline-block px-8 py-4 bg-navy hover:bg-slate-800 text-white font-bold rounded-xl transition-all shadow-lg">
-        Contact Our Advisory Team
-      </a>
+  <section id="real-estate" class="scroll-mt-24 bg-cream border-t border-ink/10 py-14 md:py-20">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24 grid lg:grid-cols-12 gap-8 lg:gap-12">
+      <div class="reveal lg:col-span-5 flex items-start gap-5">
+        <span class="w-14 h-14 shrink-0 rounded-xl bg-flame text-white flex items-center justify-center text-xl"><i class="fa-solid fa-building"></i></span>
+        <h2 class="font-display font-bold text-2xl md:text-3xl leading-tight pt-1">Real Estate Management</h2>
+      </div>
+      <div class="reveal lg:col-span-5 lg:row-start-2 aspect-[4/3] rounded-2xl overflow-hidden bg-flame/10 border border-ink/10">
+        <img src="../image-icons/building.webp" alt="Real Estate Management" loading="lazy" class="w-full h-full object-cover" onerror="this.style.display='none'">
+      </div>
+      <div class="reveal lg:col-span-7 lg:row-span-2 lg:row-start-1 lg:col-start-6" style="--d:100ms">
+        <p class="text-inksoft text-lg leading-relaxed max-w-xl mb-6">Care for property on behalf of owners, from finding tenants to keeping the building in good order.</p>
+        <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-3 mb-8 text-[15px]"><li class="flex items-start gap-3"><i class="fa-solid fa-check text-flame mt-1 text-xs"></i><span>Property letting and tenant sourcing</span></li><li class="flex items-start gap-3"><i class="fa-solid fa-check text-flame mt-1 text-xs"></i><span>Rent collection and reporting</span></li><li class="flex items-start gap-3"><i class="fa-solid fa-check text-flame mt-1 text-xs"></i><span>Regular property inspections</span></li><li class="flex items-start gap-3"><i class="fa-solid fa-check text-flame mt-1 text-xs"></i><span>Buying and selling support</span></li></ul>
+        <a href="contact.html" class="inline-flex items-center gap-2 bg-flamedeep hover:bg-flame text-white px-6 py-3 rounded-full text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-flame focus:ring-offset-2">Enquire about this service<i class="fa-solid fa-arrow-right text-xs"></i></a>
+      </div>
     </div>
   </section>
+  <section id="agro" class="scroll-mt-24 bg-white border-t border-ink/10 py-14 md:py-20">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24 grid lg:grid-cols-12 gap-8 lg:gap-12">
+      <div class="reveal lg:col-span-5 flex items-start gap-5">
+        <span class="w-14 h-14 shrink-0 rounded-xl bg-flame text-white flex items-center justify-center text-xl"><i class="fa-solid fa-seedling"></i></span>
+        <h2 class="font-display font-bold text-2xl md:text-3xl leading-tight pt-1">Agro Crop Trading</h2>
+      </div>
+      <div class="reveal lg:col-span-5 lg:row-start-2 aspect-[4/3] rounded-2xl overflow-hidden bg-flame/10 border border-ink/10">
+        <img src="../image-icons/agro-crop.webp" alt="Agro Crop Trading" loading="lazy" class="w-full h-full object-cover" onerror="this.style.display='none'">
+      </div>
+      <div class="reveal lg:col-span-7 lg:row-span-2 lg:row-start-1 lg:col-start-6" style="--d:100ms">
+        <p class="text-inksoft text-lg leading-relaxed max-w-xl mb-6">Buying and selling agricultural produce, connecting growers with buyers.</p>
+        <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-3 mb-8 text-[15px]"><li class="flex items-start gap-3"><i class="fa-solid fa-check text-flame mt-1 text-xs"></i><span>Sourcing crops from growers</span></li><li class="flex items-start gap-3"><i class="fa-solid fa-check text-flame mt-1 text-xs"></i><span>Bulk supply to buyers</span></li><li class="flex items-start gap-3"><i class="fa-solid fa-check text-flame mt-1 text-xs"></i><span>Quality checks and packaging</span></li><li class="flex items-start gap-3"><i class="fa-solid fa-check text-flame mt-1 text-xs"></i><span>Transport coordination</span></li></ul>
+        <a href="contact.html" class="inline-flex items-center gap-2 bg-flamedeep hover:bg-flame text-white px-6 py-3 rounded-full text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-flame focus:ring-offset-2">Enquire about this service<i class="fa-solid fa-arrow-right text-xs"></i></a>
+      </div>
+    </div>
+  </section>
+  <section id="maintenance" class="scroll-mt-24 bg-cream border-t border-ink/10 py-14 md:py-20">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24 grid lg:grid-cols-12 gap-8 lg:gap-12">
+      <div class="reveal lg:col-span-5 flex items-start gap-5">
+        <span class="w-14 h-14 shrink-0 rounded-xl bg-flame text-white flex items-center justify-center text-xl"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+        <h2 class="font-display font-bold text-2xl md:text-3xl leading-tight pt-1">Building Maintenance</h2>
+      </div>
+      <div class="reveal lg:col-span-5 lg:row-start-2 aspect-[4/3] rounded-2xl overflow-hidden bg-flame/10 border border-ink/10">
+        <img src="../image-icons/building-maintenance.webp" alt="Building Maintenance" loading="lazy" class="w-full h-full object-cover" onerror="this.style.display='none'">
+      </div>
+      <div class="reveal lg:col-span-7 lg:row-span-2 lg:row-start-1 lg:col-start-6" style="--d:100ms">
+        <p class="text-inksoft text-lg leading-relaxed max-w-xl mb-6">Repairs and upkeep for homes, offices and commercial premises.</p>
+        <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-3 mb-8 text-[15px]"><li class="flex items-start gap-3"><i class="fa-solid fa-check text-flame mt-1 text-xs"></i><span>Plumbing and electrical repairs</span></li><li class="flex items-start gap-3"><i class="fa-solid fa-check text-flame mt-1 text-xs"></i><span>Painting and finishing</span></li><li class="flex items-start gap-3"><i class="fa-solid fa-check text-flame mt-1 text-xs"></i><span>Cleaning and general upkeep</span></li><li class="flex items-start gap-3"><i class="fa-solid fa-check text-flame mt-1 text-xs"></i><span>Scheduled maintenance contracts</span></li></ul>
+        <a href="contact.html" class="inline-flex items-center gap-2 bg-flamedeep hover:bg-flame text-white px-6 py-3 rounded-full text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-flame focus:ring-offset-2">Enquire about this service<i class="fa-solid fa-arrow-right text-xs"></i></a>
+      </div>
+    </div>
+  </section>
+  <section id="car-hire" class="scroll-mt-24 bg-white border-t border-ink/10 py-14 md:py-20">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24 grid lg:grid-cols-12 gap-8 lg:gap-12">
+      <div class="reveal lg:col-span-5 flex items-start gap-5">
+        <span class="w-14 h-14 shrink-0 rounded-xl bg-flame text-white flex items-center justify-center text-xl"><i class="fa-solid fa-car-side"></i></span>
+        <h2 class="font-display font-bold text-2xl md:text-3xl leading-tight pt-1">Car Hire & Logistics</h2>
+      </div>
+      <div class="reveal lg:col-span-5 lg:row-start-2 aspect-[4/3] rounded-2xl overflow-hidden bg-flame/10 border border-ink/10">
+        <img src="../image-icons/rental-car.jpg" alt="Car Hire & Logistics" loading="lazy" class="w-full h-full object-cover" onerror="this.style.display='none'">
+      </div>
+      <div class="reveal lg:col-span-7 lg:row-span-2 lg:row-start-1 lg:col-start-6" style="--d:100ms">
+        <p class="text-inksoft text-lg leading-relaxed max-w-xl mb-6">Vehicles for people and goods, on short or long terms.</p>
+        <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-3 mb-8 text-[15px]"><li class="flex items-start gap-3"><i class="fa-solid fa-check text-flame mt-1 text-xs"></i><span>Self-drive and chauffeured vehicles</span></li><li class="flex items-start gap-3"><i class="fa-solid fa-check text-flame mt-1 text-xs"></i><span>Airport transfers</span></li><li class="flex items-start gap-3"><i class="fa-solid fa-check text-flame mt-1 text-xs"></i><span>Daily, weekly and long-term hire</span></li><li class="flex items-start gap-3"><i class="fa-solid fa-check text-flame mt-1 text-xs"></i><span>Goods transport</span></li></ul>
+        <a href="contact.html" class="inline-flex items-center gap-2 bg-flamedeep hover:bg-flame text-white px-6 py-3 rounded-full text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-flame focus:ring-offset-2">Enquire about this service<i class="fa-solid fa-arrow-right text-xs"></i></a>
+      </div>
+    </div>
+  </section>
+  <section id="travel" class="scroll-mt-24 bg-cream border-t border-ink/10 py-14 md:py-20">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24 grid lg:grid-cols-12 gap-8 lg:gap-12">
+      <div class="reveal lg:col-span-5 flex items-start gap-5">
+        <span class="w-14 h-14 shrink-0 rounded-xl bg-flame text-white flex items-center justify-center text-xl"><i class="fa-solid fa-passport"></i></span>
+        <h2 class="font-display font-bold text-2xl md:text-3xl leading-tight pt-1">Travel & Visa Assistance</h2>
+      </div>
+      <div class="reveal lg:col-span-5 lg:row-start-2 aspect-[4/3] rounded-2xl overflow-hidden bg-flame/10 border border-ink/10">
+        <img src="../image-icons/travel-agency.webp" alt="Travel & Visa Assistance" loading="lazy" class="w-full h-full object-cover" onerror="this.style.display='none'">
+      </div>
+      <div class="reveal lg:col-span-7 lg:row-span-2 lg:row-start-1 lg:col-start-6" style="--d:100ms">
+        <p class="text-inksoft text-lg leading-relaxed max-w-xl mb-6">Help with the paperwork and bookings that come before a trip.</p>
+        <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-3 mb-8 text-[15px]"><li class="flex items-start gap-3"><i class="fa-solid fa-check text-flame mt-1 text-xs"></i><span>Visa application guidance</span></li><li class="flex items-start gap-3"><i class="fa-solid fa-check text-flame mt-1 text-xs"></i><span>Document preparation</span></li><li class="flex items-start gap-3"><i class="fa-solid fa-check text-flame mt-1 text-xs"></i><span>Flight and accommodation booking</span></li><li class="flex items-start gap-3"><i class="fa-solid fa-check text-flame mt-1 text-xs"></i><span>Travel advice</span></li></ul>
+        <a href="contact.html" class="inline-flex items-center gap-2 bg-flamedeep hover:bg-flame text-white px-6 py-3 rounded-full text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-flame focus:ring-offset-2">Enquire about this service<i class="fa-solid fa-arrow-right text-xs"></i></a>
+      </div>
+    </div>
+  </section>
+  <section id="supplies" class="scroll-mt-24 bg-white border-t border-ink/10 py-14 md:py-20">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24 grid lg:grid-cols-12 gap-8 lg:gap-12">
+      <div class="reveal lg:col-span-5 flex items-start gap-5">
+        <span class="w-14 h-14 shrink-0 rounded-xl bg-flame text-white flex items-center justify-center text-xl"><i class="fa-solid fa-boxes-stacked"></i></span>
+        <h2 class="font-display font-bold text-2xl md:text-3xl leading-tight pt-1">General Supplies & Services</h2>
+      </div>
+      <div class="reveal lg:col-span-5 lg:row-start-2 aspect-[4/3] rounded-2xl overflow-hidden bg-flame/10 border border-ink/10">
+        <img src="../image-icons/general-supplies.webp" alt="General Supplies & Services" loading="lazy" class="w-full h-full object-cover" onerror="this.style.display='none'">
+      </div>
+      <div class="reveal lg:col-span-7 lg:row-span-2 lg:row-start-1 lg:col-start-6" style="--d:100ms">
+        <p class="text-inksoft text-lg leading-relaxed max-w-xl mb-6">A single supplier for the everyday items and equipment your business needs.</p>
+        <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-3 mb-8 text-[15px]"><li class="flex items-start gap-3"><i class="fa-solid fa-check text-flame mt-1 text-xs"></i><span>Office and stationery supplies</span></li><li class="flex items-start gap-3"><i class="fa-solid fa-check text-flame mt-1 text-xs"></i><span>Equipment and materials procurement</span></li><li class="flex items-start gap-3"><i class="fa-solid fa-check text-flame mt-1 text-xs"></i><span>Supply to businesses and institutions</span></li><li class="flex items-start gap-3"><i class="fa-solid fa-check text-flame mt-1 text-xs"></i><span>Sourcing of specific items on request</span></li></ul>
+        <a href="contact.html" class="inline-flex items-center gap-2 bg-flamedeep hover:bg-flame text-white px-6 py-3 rounded-full text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-flame focus:ring-offset-2">Enquire about this service<i class="fa-solid fa-arrow-right text-xs"></i></a>
+      </div>
+    </div>
+  </section>
+  <section class="bg-navy text-white py-16">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+      <div class="reveal">
+        <h2 class="font-display font-bold text-2xl md:text-3xl">Not sure which service you need?</h2>
+        <p class="text-white/70 mt-2">Tell us what you are trying to get done and we will reply with next steps.</p>
+      </div>
+      <a href="contact.html" class="reveal inline-flex items-center gap-2 bg-flame hover:bg-flame2 text-white px-7 py-3.5 rounded-full font-semibold transition-colors shrink-0 self-start md:self-auto">Contact us<i class="fa-solid fa-arrow-right text-xs"></i></a>
+    </div>
+  </section>
+</main>
 
-  <!-- ================= FILTER SCRIPT ================= -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const filterBtns = document.querySelectorAll('.filter-btn');
-      const serviceCards = document.querySelectorAll('.service-card');
+<footer id="contact" class="relative bg-slate-950 text-slate-400 pt-0 pb-6 overflow-hidden">
+  
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-orange-600/5 rounded-full filter blur-[120px] pointer-events-none"></div>
 
-      filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          // Remove active classes
-          filterBtns.forEach(b => {
-            b.classList.remove('active', 'bg-flame', 'text-white', 'shadow-sm');
-            b.classList.add('text-inksoft');
-          });
+  <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24 relative z-10">
 
-          // Add active class to clicked button
-          btn.classList.add('active', 'bg-flame', 'text-white', 'shadow-sm');
-          btn.classList.remove('text-inksoft');
+    <div class="pt-8 pb-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 md:gap-6 border-b border-slate-800/80">
 
-          const category = btn.getAttribute('data-category');
+      <div class="reveal lg:col-span-4">
+        <div class="flex justify-start items-center gap-3 mb-3">
+          <img src="../image-icons/ask-logo%20blvk.png" alt="Asknetic Group Logo" class="w-20 h-24 object-contain">
+        </div>
+        <p class="text-sm text-slate-400 leading-relaxed mb-3 max-w-sm">
+          A diversified group of companies based in Dar es Salaam, delivering high-impact solutions across seven core operational sectors throughout Tanzania.
+        </p>
+        <div class="flex items-center gap-3">
+          <a href="javascript:void(0)" aria-label="Facebook" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-flame hover:border-flame transition-all duration-300">
+            <i class="fa-brands fa-facebook-f text-sm"></i>
+          </a>
+          <a href="javascript:void(0)" aria-label="Twitter" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-flame hover:border-flame transition-all duration-300">
+            <i class="fa-brands fa-x-twitter text-sm"></i>
+          </a>
+          <a href="javascript:void(0)" aria-label="Instagram" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-flame hover:border-flame transition-all duration-300">
+            <i class="fa-brands fa-instagram text-sm"></i>
+          </a>
+          <a href="javascript:void(0)" aria-label="LinkedIn" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-flame hover:border-flame transition-all duration-300">
+            <i class="fa-brands fa-linkedin-in text-sm"></i>
+          </a>
+        </div>
+      </div>
 
-          serviceCards.forEach(card => {
-            if (category === 'all' || card.getAttribute('data-category') === category) {
-              card.style.display = 'flex';
-            } else {
-              card.style.display = 'none';
-            }
-          });
-        });
+      <div class="reveal lg:col-span-3">
+        <h4 class="text-white text-xs font-bold uppercase tracking-widest mb-3">Our Services</h4>
+        <ul class="space-y-1.5 text-sm">
+          <li><a href="services.html#ict" class="hover:text-flame transition-all duration-200 inline-block hover:translate-x-1">ICT & Digital Solutions</a></li>
+          <li><a href="services.html#real-estate" class="hover:text-flame transition-all duration-200 inline-block hover:translate-x-1">Real Estate Management</a></li>
+          <li><a href="services.html#agro" class="hover:text-flame transition-all duration-200 inline-block hover:translate-x-1">Agro Crop Trading</a></li>
+          <li><a href="services.html#maintenance" class="hover:text-flame transition-all duration-200 inline-block hover:translate-x-1">Building Maintenance</a></li>
+          <li><a href="services.html#car-hire" class="hover:text-flame transition-all duration-200 inline-block hover:translate-x-1">Car Hire & Logistics</a></li>
+          <li><a href="services.html#travel" class="hover:text-flame transition-all duration-200 inline-block hover:translate-x-1">Travel & Visa Assistance</a></li>
+          <li><a href="services.html#supplies" class="hover:text-flame transition-all duration-200 inline-block hover:translate-x-1">General Supplies & Services</a></li>
+        </ul>
+      </div>
+
+      <div class="reveal lg:col-span-2">
+        <h4 class="text-white text-xs font-bold uppercase tracking-widest mb-3">Office Address</h4>
+        <address class="not-italic text-sm leading-relaxed space-y-1">
+          <p class="text-slate-300 font-medium"><i class="fa-solid fa-location-dot text-flame mr-2"></i>Peninsula Noble Center</p>
+          <p><i class="fa-solid fa-envelope text-flame mr-2"></i>Oysterbay, PO Box 3176</p>
+          <p>Dar es Salaam, Tanzania</p>
+        </address>
+      </div>
+
+      <div class="reveal lg:col-span-3">
+        <h4 class="text-white text-xs font-bold uppercase tracking-widest mb-3">Get In Touch</h4>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a href="mailto:info@askneticgroup.co.tz" class="flex items-center gap-3 hover:text-flame transition-colors group">
+              <span class="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-flame group-hover:bg-flame group-hover:text-white transition-all">
+                <i class="fa-solid fa-envelope text-xs"></i>
+              </span>
+              <span class="break-all">info@askneticgroup.co.tz</span>
+            </a>
+          </li>
+          <li>
+            <a href="tel:+255799111141" class="flex items-center gap-3 hover:text-flame transition-colors group">
+              <span class="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-flame group-hover:bg-flame group-hover:text-white transition-all">
+                <i class="fa-solid fa-phone text-xs"></i>
+              </span>
+              <span>+255 799 111 141</span>
+            </a>
+          </li>
+          <li>
+            <a href="tel:+255655911211" class="flex items-center gap-3 hover:text-flame transition-colors group">
+              <span class="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-flame group-hover:bg-flame group-hover:text-white transition-all">
+                <i class="fa-solid fa-phone text-xs"></i>
+              </span>
+              <span>+255 655 911 211</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+      <p>© <span id="footer-year">2026</span> Asknetic Enterprises Ltd. All rights reserved.</p>
+      <div class="flex items-center gap-6">
+        <a href="javascript:void(0)" class="hover:text-slate-300 transition-colors">Privacy Policy</a>
+        <a href="javascript:void(0)" class="hover:text-slate-300 transition-colors">Terms of Service</a>
+        <span class="text-slate-400 font-semibold">www.askneticgroup.co.tz</span>
+      </div>
+    </div>
+
+  </div> 
+</footer>
+
+<button id="backToTop" type="button" aria-label="Back to top" class="fixed bottom-28 right-7 z-40 w-12 h-12 rounded-full bg-flamedeep hover:bg-flame text-white shadow-soft flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-flame focus:ring-offset-2">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+<a href="https://wa.me/255799111141?text=Hello%20Asknetic%20Group,%20I%20would%20like%20to%20inquire%20about%20your%20services." 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20ba5a] text-white p-4 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-green-300 group"
+   aria-label="Chat with us on WhatsApp">
+  <i class="fa-brands fa-whatsapp text-3xl"></i>
+  <span class="absolute right-full mr-3 bg-slate-900 text-white text-xs font-semibold px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-md">
+    Chat with us on WhatsApp
+  </span>
+</a>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+
+  // Back-to-top button visibility
+  var toTop = $('backToTop');
+  function onScroll() {
+    var y = window.scrollY;
+    toTop.classList.toggle('show', y > 500);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+  toTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+  // Desktop Services dropdown
+  var btn = $('sectorsBtn'), menu = $('sectorsMenu'), arrow = $('sectorsArrow'), item = btn.parentElement;
+  function setMenu(open) {
+    menu.classList.toggle('hidden', !open);
+    btn.setAttribute('aria-expanded', open);
+    arrow.classList.toggle('rotate-180', open);
+  }
+  var canHover = window.matchMedia('(hover: hover)').matches;
+  btn.addEventListener('click', function () { setMenu(canHover ? true : menu.classList.contains('hidden')); });
+  if (canHover) {
+    item.addEventListener('mouseenter', function () { setMenu(true); });
+    item.addEventListener('mouseleave', function () { setMenu(false); });
+  }
+  document.addEventListener('click', function (e) { if (!item.contains(e.target)) setMenu(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { setMenu(false); setMobile(false); } });
+  menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+
+  // Mobile menu
+  var toggle = $('navtoggle'), mobile = $('mobilemenu'), icon = $('navtoggle-icon');
+  function setMobile(open) {
+    mobile.classList.toggle('hidden', !open);
+    toggle.setAttribute('aria-expanded', open);
+    icon.classList.toggle('fa-bars', !open);
+    icon.classList.toggle('fa-xmark', open);
+  }
+  toggle.addEventListener('click', function () { setMobile(mobile.classList.contains('hidden')); });
+  var mBtn = $('mobileSectorsBtn'), mMenu = $('mobileSectorsMenu'), mArrow = $('mobileSectorsArrow');
+  mBtn.addEventListener('click', function () {
+    var open = mMenu.classList.toggle('hidden') === false;
+    mBtn.setAttribute('aria-expanded', open);
+    mArrow.classList.toggle('rotate-180', open);
+  });
+  mobile.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setMobile(false); }); });
+  window.addEventListener('resize', function () { if (window.innerWidth >= 1024) setMobile(false); });
+
+  // Scroll reveal
+  var els = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('active'); io.unobserve(en.target); }
       });
-    });
-  </script>
+    }, { threshold: 0.12 });
+    els.forEach(function (el) { io.observe(el); });
+  } else {
+    els.forEach(function (el) { el.classList.add('active'); });
+  }
 
+  // Footer year
+  $('footer-year').textContent = new Date().getFullYear();
+})();
+</script>
 </body>
 </html>
