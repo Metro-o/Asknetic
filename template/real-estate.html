@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Real Estate Management | Asknetic Group</title>
+<meta name="description" content="Care for property on behalf of owners, from finding tenants to keeping the building in good order. Asknetic Enterprises Ltd, Dar es Salaam, Tanzania.">
+<link rel="canonical" href="https://www.askneticgroup.co.tz/real-estate.html">
+<meta property="og:title" content="Real Estate Management | Asknetic Group">
+<meta property="og:description" content="Care for property on behalf of owners, from finding tenants to keeping the building in good order.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.askneticgroup.co.tz/real-estate.html">
+<link rel="icon" type="image/png" href="../image-icons/ask-logo%20white.png">
+<link rel="icon" href="../image-icons/favicon.ico" sizes="any">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#181411',
+          inksoft: '#645A52',
+          paper: '#FFFFFF',
+          cream: '#FBF7F1',
+          flame: '#E17A2E',
+          flame2: '#F4A05C',
+          flamedeep: '#B85A18',
+          navy: '#211C18',
+        },
+        fontFamily: {
+          display: ['Outfit', 'sans-serif'],
+          sans: ['Inter', 'sans-serif'],
+        },
+        boxShadow: {
+          soft: '0 20px 50px -20px rgba(24,20,17,0.25)',
+          card: '0 10px 30px -10px rgba(24,20,17,0.12)',
+        }
+      }
+    }
+  }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" crossorigin="anonymous" defer></script>
+
+<style>
+  html{scroll-behavior:smooth;}
+  body{-webkit-font-smoothing:antialiased;}
+  ::selection{background:#E17A2E;color:#fff;}
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+  }
+  @keyframes floatDelayed {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(8px); }
+  }
+  .animate-float { animation: float 4s ease-in-out infinite; }
+  .animate-float-delayed { animation: floatDelayed 5s ease-in-out infinite; }
+
+  html .reveal, html .reveal-left, html .reveal-right, html .reveal-scale{
+    opacity:0;
+    transition:opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1);
+    transition-delay:var(--d,0ms);
+    will-change:opacity,transform;
+  }
+  html .reveal{transform:translateY(32px);}
+  html .reveal-left{transform:translateX(-40px);}
+  html .reveal-right{transform:translateX(40px);}
+  html .reveal-scale{transform:scale(.92);}
+  html .reveal.active, html .reveal-left.active, html .reveal-right.active, html .reveal-scale.active{
+    opacity:1;transform:none;
+  }
+
+  @keyframes scrollDot {
+    0% { transform: translateY(0); opacity: 1; }
+    70% { transform: translateY(14px); opacity: 0.3; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+  .animate-scrollDot{ animation: scrollDot 1.6s ease-in-out infinite; }
+
+  #backToTop{
+    opacity:0;
+    transform:translateY(16px);
+    pointer-events:none;
+    transition:opacity .3s ease, transform .3s ease, background-color .2s ease;
+  }
+  #backToTop.show{opacity:1;transform:none;pointer-events:auto;}
+  #backToTop.show:hover{transform:translateY(-3px);}
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{transition:none!important;}
+    html .reveal, html .reveal-left, html .reveal-right, html .reveal-scale{opacity:1;transform:none;}
+  }
+  .svc-card{width:100%;}
+  @media (min-width:640px){.svc-card{width:calc(50% - 12px);}}
+  @media (min-width:1024px){.svc-card{width:calc(25% - 18px);}}
+  .svc-tab-wrap{filter:drop-shadow(0 10px 12px rgba(24,20,17,.10));}
+  .svc-tab{width:96px;height:72px;background:#fff;clip-path:path('M0 0H96L88 50Q86 72 64 72H32Q10 72 8 50Z');}
+  .orbit-ring{animation:orbitSpin 40s linear infinite;}
+  .orbit-badge{position:absolute;top:0;left:50%;margin-left:-28px;width:56px;height:56px;animation:orbitCounter 40s linear infinite;}
+  .orbit:hover .orbit-ring,.orbit:hover .orbit-badge,.orbit:focus-within .orbit-ring,.orbit:focus-within .orbit-badge{animation-play-state:paused;}
+  @keyframes orbitSpin{to{transform:rotate(360deg);}}
+  @keyframes orbitCounter{from{transform:rotate(calc(var(--a) * -1));}to{transform:rotate(calc(var(--a) * -1 - 360deg));}}
+  @media (prefers-reduced-motion:reduce){.orbit-ring{animation:none;}.orbit-badge{animation:none;transform:rotate(calc(var(--a) * -1));}}
+</style>
+<noscript><style>html .reveal,html .reveal-left,html .reveal-right,html .reveal-scale{opacity:1!important;transform:none!important;}</style></noscript>
+</head>
+<body class="bg-cream text-ink font-sans antialiased overflow-x-hidden w-full">
+
+<!-- HEADER -->
+<header id="site-header" class="fixed top-0 inset-x-0 z-50 w-full bg-white/90 backdrop-blur-xl shadow-card">
+  <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 py-3 w-full">
+  
+  <a href="index.html" class="flex items-center gap-2.5 shrink-0 focus:outline-none">
+    <img src="../image-icons/ask-logo%20white.png" alt="Asknetic Group Logo" class="h-16 w-auto max-w-full object-contain transition-transform duration-200 hover:scale-105">
+  </a>
+ 
+  <ul id="navlinks" class="hidden lg:flex items-center gap-8 list-none m-0 p-0">
+    <li>
+      <a href="index.html" class="text-base font-semibold text-black hover:text-flame transition-colors py-1">Home</a>
+    </li>
+    <li>
+      <a href="about-us.html" class="text-base font-semibold text-black hover:text-flame transition-colors py-1">About Us</a>
+    </li>
+    <li class="relative group">
+      <button id="sectorsBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="sectorsMenu" class="flex items-center gap-1.5 text-base font-semibold text-flame hover:text-flamedeep transition-colors py-1 border-b-2 border-flame focus:outline-none">
+        <span>Services</span>
+        <i id="sectorsArrow" class="fa-solid fa-chevron-down text-[10px] transition-transform duration-200"></i>
+      </button>
+      
+      <!-- Fixed Hover Gap with Padding Bridge -->
+      <div id="sectorsMenu" class="hidden absolute top-full left-1/2 -translate-x-1/2 pt-2 w-64 z-50">
+        <div class="bg-navy/95 backdrop-blur-xl border border-white/10 rounded-2xl p-2.5 flex flex-col gap-1 shadow-2xl">
+          <a href="ict.html" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">ICT Solutions</a>
+          <a href="real-estate.html" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">Real Estate</a>
+          <a href="agro.html" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">Agro Crops</a>
+          <a href="maintenance.html" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">Building Maintenance</a>
+          <a href="car-hire.html" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">Car Hire</a>
+          <a href="travel.html" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">Travel & Visa Assistance</a>
+          <a href="supplies.html" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">General Supplies</a>
+        <div class="my-1 border-t border-white/10"></div>
+        <a href="services.html" class="px-3 py-2 rounded-xl text-xs font-semibold text-flame hover:bg-flame/10 hover:text-flamedeep transition-all">
+          <span>View All Services</span>
+          <i class="fa-solid fa-arrow-right text-xs ml-1"></i>
+        </a>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="contact.html" class="text-base font-semibold text-black hover:text-flame transition-colors py-1">Contact Us</a>
+    </li>
+  </ul>
+ 
+  <a href="contact.html" class="hidden lg:inline-flex items-center gap-2 bg-flamedeep hover:bg-flame text-white px-6 py-2.5 rounded-full text-base font-semibold transition-all shadow-md hover:shadow-xl hover:-translate-y-0.5 shrink-0 shadow-flamedeep focus:outline-none focus:ring-2 focus:ring-flame focus:ring-offset-2">
+    <span>Get in Touch</span>
+    <i class="fa-solid fa-arrow-right text-xs ml-1"></i>
+  </a>
+   
+    <button id="navtoggle" type="button" class="lg:hidden w-10 h-10 rounded-full hover:bg-flame/10 flex items-center justify-center text-flame transition-colors focus:outline-none" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobilemenu">
+      <i class="fa-solid fa-bars" id="navtoggle-icon"></i>
+    </button>
+</nav>
+ 
+<div id="mobilemenu" class="hidden lg:hidden mx-4 mt-2 rounded-2xl bg-navy/95 backdrop-blur-xl border border-white/20 shadow-2xl px-6 py-4">
+  <a href="index.html" class="block py-3 border-b border-white/10 text-base font-semibold text-white hover:text-flame transition-colors">Home</a>
+  <a href="about-us.html" class="block py-3 border-b border-white/10 text-base font-semibold text-white hover:text-flame transition-colors">About Us</a>
+  
+  <div class="border-b border-white/10 py-3">
+    <button id="mobileSectorsBtn" type="button" aria-expanded="false" aria-controls="mobileSectorsMenu" class="flex items-center justify-between w-full text-base font-semibold text-white hover:text-flame transition-colors focus:outline-none">
+      <span>Services</span>
+      <i id="mobileSectorsArrow" class="fa-solid fa-chevron-down text-xs transition-transform duration-200"></i>
+    </button>
+    
+    <div id="mobileSectorsMenu" class="hidden pl-4 pt-4 flex flex-col gap-3 text-sm">
+      <a href="ict.html" class="text-white/80 hover:text-flame transition-colors">ICT Solutions</a>
+      <a href="real-estate.html" class="text-white/80 hover:text-flame transition-colors">Real Estate</a>
+      <a href="agro.html" class="text-white/80 hover:text-flame transition-colors">Agro Crops</a>
+      <a href="maintenance.html" class="text-white/80 hover:text-flame transition-colors">Building Maintenance</a>
+      <a href="car-hire.html" class="text-white/80 hover:text-flame transition-colors">Car Hire</a>
+      <a href="travel.html" class="text-white/80 hover:text-flame transition-colors">Travel & Visa Assistance</a>
+      <a href="supplies.html" class="text-white/80 hover:text-flame transition-colors">General Supplies</a>
+    </div>
+  </div>
+ 
+  <a href="contact.html" class="block py-3 border-b border-white/10 text-base font-semibold text-white hover:text-flame transition-colors">Contact Us</a>
+  
+  <div class="pt-5 pb-2">
+    <a href="contact.html" class="flex items-center justify-center w-full bg-flame text-white py-3 rounded-full text-base font-semibold hover:bg-flamedeep transition-colors shadow-2xl shadow-amber-400">
+      Get in Touch
+    </a>
+  </div>
+</div>
+</header>
+
+<main>
+  <section class="relative isolate overflow-hidden bg-slate-900 bg-cover bg-center bg-no-repeat pt-36 pb-14 md:pt-44 md:pb-20" style="background-image: url('../image-icons/building.webp');">
+    <div class="absolute inset-0 bg-slate-950/75"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24">
+      <nav aria-label="Breadcrumb" class="reveal text-sm text-slate-300 mb-6 flex flex-wrap items-center gap-2">
+        <a href="index.html" class="hover:text-flame transition-colors">Home</a><i class="fa-solid fa-chevron-right text-[9px]"></i>
+        <a href="services.html" class="hover:text-flame transition-colors">Services</a><i class="fa-solid fa-chevron-right text-[9px]"></i>
+        <span class="text-white">Real Estate Management</span>
+      </nav>
+      <span class="reveal w-16 h-16 rounded-2xl bg-flame text-white flex items-center justify-center text-2xl mb-6" style="--d:50ms"><i class="fa-solid fa-building"></i></span>
+      <h1 class="reveal font-display font-extrabold text-4xl md:text-6xl leading-[1.08] text-white max-w-3xl" style="--d:100ms">Real Estate Management</h1>
+      <p class="reveal text-slate-200 text-lg md:text-xl leading-relaxed max-w-2xl mt-6" style="--d:150ms">Care for property on behalf of owners, from finding tenants to keeping the building in good order.</p>
+      <div class="reveal flex flex-wrap gap-3 mt-10" style="--d:200ms">
+        <a href="contact.html" class="inline-flex items-center gap-2 bg-flamedeep hover:bg-flame text-white px-7 py-3.5 rounded-full font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-flame focus:ring-offset-2">Enquire about this service<i class="fa-solid fa-arrow-right text-xs"></i></a>
+        <a href="services.html" class="inline-flex items-center gap-2 border border-white/30 bg-white/10 hover:bg-white/20 text-white px-7 py-3.5 rounded-full font-semibold transition-colors">All services</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-cream py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24 grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+      <div class="lg:col-span-7">
+        <h2 class="reveal font-display font-bold text-2xl md:text-3xl mb-8">What we offer</h2>
+        <ul class="grid sm:grid-cols-2 gap-4 list-none m-0 p-0"><li class="flex items-start gap-4 bg-white rounded-2xl shadow-card p-5"><span class="w-9 h-9 shrink-0 rounded-full bg-flame/10 text-flame flex items-center justify-center"><i class="fa-solid fa-check text-sm"></i></span><span class="font-medium leading-snug pt-1.5">Property letting and tenant sourcing</span></li><li class="flex items-start gap-4 bg-white rounded-2xl shadow-card p-5"><span class="w-9 h-9 shrink-0 rounded-full bg-flame/10 text-flame flex items-center justify-center"><i class="fa-solid fa-check text-sm"></i></span><span class="font-medium leading-snug pt-1.5">Rent collection and reporting</span></li><li class="flex items-start gap-4 bg-white rounded-2xl shadow-card p-5"><span class="w-9 h-9 shrink-0 rounded-full bg-flame/10 text-flame flex items-center justify-center"><i class="fa-solid fa-check text-sm"></i></span><span class="font-medium leading-snug pt-1.5">Regular property inspections</span></li><li class="flex items-start gap-4 bg-white rounded-2xl shadow-card p-5"><span class="w-9 h-9 shrink-0 rounded-full bg-flame/10 text-flame flex items-center justify-center"><i class="fa-solid fa-check text-sm"></i></span><span class="font-medium leading-snug pt-1.5">Buying and selling support</span></li></ul>
+      </div>
+      <div class="reveal lg:col-span-5 aspect-[4/3] rounded-2xl overflow-hidden bg-flame/10 border border-ink/10 shadow-card">
+        <img src="../image-icons/building.webp" alt="Real Estate Management" loading="lazy" class="w-full h-full object-cover" onerror="this.style.display='none'">
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white border-t border-ink/10 py-14 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24">
+      <h2 class="reveal font-display font-bold text-xl md:text-2xl mb-6">Our other services</h2>
+      <div class="reveal grid sm:grid-cols-2 lg:grid-cols-3 gap-4"><a href="ict.html" class="group flex items-center gap-3 bg-white rounded-xl shadow-card px-4 py-3 hover:bg-flame hover:text-white transition-colors"><span class="w-10 h-10 shrink-0 rounded-lg bg-flame/10 text-flame group-hover:bg-white/20 group-hover:text-white flex items-center justify-center"><i class="fa-solid fa-laptop-code"></i></span><span class="font-semibold text-sm">ICT & Digital Solutions</span></a><a href="agro.html" class="group flex items-center gap-3 bg-white rounded-xl shadow-card px-4 py-3 hover:bg-flame hover:text-white transition-colors"><span class="w-10 h-10 shrink-0 rounded-lg bg-flame/10 text-flame group-hover:bg-white/20 group-hover:text-white flex items-center justify-center"><i class="fa-solid fa-seedling"></i></span><span class="font-semibold text-sm">Agro Crop Trading</span></a><a href="maintenance.html" class="group flex items-center gap-3 bg-white rounded-xl shadow-card px-4 py-3 hover:bg-flame hover:text-white transition-colors"><span class="w-10 h-10 shrink-0 rounded-lg bg-flame/10 text-flame group-hover:bg-white/20 group-hover:text-white flex items-center justify-center"><i class="fa-solid fa-screwdriver-wrench"></i></span><span class="font-semibold text-sm">Building Maintenance</span></a><a href="car-hire.html" class="group flex items-center gap-3 bg-white rounded-xl shadow-card px-4 py-3 hover:bg-flame hover:text-white transition-colors"><span class="w-10 h-10 shrink-0 rounded-lg bg-flame/10 text-flame group-hover:bg-white/20 group-hover:text-white flex items-center justify-center"><i class="fa-solid fa-car-side"></i></span><span class="font-semibold text-sm">Car Hire & Logistics</span></a><a href="travel.html" class="group flex items-center gap-3 bg-white rounded-xl shadow-card px-4 py-3 hover:bg-flame hover:text-white transition-colors"><span class="w-10 h-10 shrink-0 rounded-lg bg-flame/10 text-flame group-hover:bg-white/20 group-hover:text-white flex items-center justify-center"><i class="fa-solid fa-passport"></i></span><span class="font-semibold text-sm">Travel & Visa Assistance</span></a><a href="supplies.html" class="group flex items-center gap-3 bg-white rounded-xl shadow-card px-4 py-3 hover:bg-flame hover:text-white transition-colors"><span class="w-10 h-10 shrink-0 rounded-lg bg-flame/10 text-flame group-hover:bg-white/20 group-hover:text-white flex items-center justify-center"><i class="fa-solid fa-boxes-stacked"></i></span><span class="font-semibold text-sm">General Supplies & Services</span></a></div>
+    </div>
+  </section>
+
+  <section class="bg-navy text-white py-16">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+      <div class="reveal">
+        <h2 class="font-display font-bold text-2xl md:text-3xl">Interested in Real Estate Management?</h2>
+        <p class="text-white/70 mt-2">Tell us what you are trying to get done and we will reply with next steps.</p>
+      </div>
+      <a href="contact.html" class="reveal inline-flex items-center gap-2 bg-flame hover:bg-flame2 text-white px-7 py-3.5 rounded-full font-semibold transition-colors shrink-0 self-start md:self-auto">Contact us<i class="fa-solid fa-arrow-right text-xs"></i></a>
+    </div>
+  </section>
+</main>
+
+<footer id="contact" class="relative bg-slate-950 text-slate-400 pt-0 pb-6 overflow-hidden">
+  
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-orange-600/5 rounded-full filter blur-[120px] pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24 relative z-10">
+
+    <div class="pt-8 pb-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 md:gap-6 border-b border-slate-800/80">
+
+      <div class="reveal lg:col-span-4">
+        <div class="flex justify-start items-center gap-3 mb-3">
+          <img src="../image-icons/ask-logo%20blvk.png" alt="Asknetic Group Logo" class="w-20 h-24 object-contain">
+        </div>
+        <p class="text-sm text-slate-400 leading-relaxed mb-3 max-w-sm">
+          A diversified group of companies based in Dar es Salaam, delivering high-impact solutions across seven core operational sectors throughout Tanzania.
+        </p>
+        <div class="flex items-center gap-3">
+          <a href="javascript:void(0)" aria-label="Facebook" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-flame hover:border-flame transition-all duration-300">
+            <i class="fa-brands fa-facebook-f text-sm"></i>
+          </a>
+          <a href="javascript:void(0)" aria-label="Twitter" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-flame hover:border-flame transition-all duration-300">
+            <i class="fa-brands fa-x-twitter text-sm"></i>
+          </a>
+          <a href="javascript:void(0)" aria-label="Instagram" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-flame hover:border-flame transition-all duration-300">
+            <i class="fa-brands fa-instagram text-sm"></i>
+          </a>
+          <a href="javascript:void(0)" aria-label="LinkedIn" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-flame hover:border-flame transition-all duration-300">
+            <i class="fa-brands fa-linkedin-in text-sm"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="reveal lg:col-span-3">
+        <h4 class="text-white text-xs font-bold uppercase tracking-widest mb-3">Our Services</h4>
+        <ul class="space-y-1.5 text-sm">
+          <li><a href="ict.html" class="hover:text-flame transition-all duration-200 inline-block hover:translate-x-1">ICT & Digital Solutions</a></li>
+          <li><a href="real-estate.html" class="hover:text-flame transition-all duration-200 inline-block hover:translate-x-1">Real Estate Management</a></li>
+          <li><a href="agro.html" class="hover:text-flame transition-all duration-200 inline-block hover:translate-x-1">Agro Crop Trading</a></li>
+          <li><a href="maintenance.html" class="hover:text-flame transition-all duration-200 inline-block hover:translate-x-1">Building Maintenance</a></li>
+          <li><a href="car-hire.html" class="hover:text-flame transition-all duration-200 inline-block hover:translate-x-1">Car Hire & Logistics</a></li>
+          <li><a href="travel.html" class="hover:text-flame transition-all duration-200 inline-block hover:translate-x-1">Travel & Visa Assistance</a></li>
+          <li><a href="supplies.html" class="hover:text-flame transition-all duration-200 inline-block hover:translate-x-1">General Supplies & Services</a></li>
+        </ul>
+      </div>
+
+      <div class="reveal lg:col-span-2">
+        <h4 class="text-white text-xs font-bold uppercase tracking-widest mb-3">Office Address</h4>
+        <address class="not-italic text-sm leading-relaxed space-y-1">
+          <p class="text-slate-300 font-medium"><i class="fa-solid fa-location-dot text-flame mr-2"></i>Peninsula Noble Center</p>
+          <p><i class="fa-solid fa-envelope text-flame mr-2"></i>Oysterbay, PO Box 3176</p>
+          <p>Dar es Salaam, Tanzania</p>
+        </address>
+      </div>
+
+      <div class="reveal lg:col-span-3">
+        <h4 class="text-white text-xs font-bold uppercase tracking-widest mb-3">Get In Touch</h4>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a href="mailto:info@askneticgroup.co.tz" class="flex items-center gap-3 hover:text-flame transition-colors group">
+              <span class="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-flame group-hover:bg-flame group-hover:text-white transition-all">
+                <i class="fa-solid fa-envelope text-xs"></i>
+              </span>
+              <span class="break-all">info@askneticgroup.co.tz</span>
+            </a>
+          </li>
+          <li>
+            <a href="tel:+255799111141" class="flex items-center gap-3 hover:text-flame transition-colors group">
+              <span class="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-flame group-hover:bg-flame group-hover:text-white transition-all">
+                <i class="fa-solid fa-phone text-xs"></i>
+              </span>
+              <span>+255 799 111 141</span>
+            </a>
+          </li>
+          <li>
+            <a href="tel:+255655911211" class="flex items-center gap-3 hover:text-flame transition-colors group">
+              <span class="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-flame group-hover:bg-flame group-hover:text-white transition-all">
+                <i class="fa-solid fa-phone text-xs"></i>
+              </span>
+              <span>+255 655 911 211</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+      <p>© <span id="footer-year">2026</span> Asknetic Enterprises Ltd. All rights reserved.</p>
+      <div class="flex items-center gap-6">
+        <a href="javascript:void(0)" class="hover:text-slate-300 transition-colors">Privacy Policy</a>
+        <a href="javascript:void(0)" class="hover:text-slate-300 transition-colors">Terms of Service</a>
+        <span class="text-slate-400 font-semibold">www.askneticgroup.co.tz</span>
+      </div>
+    </div>
+
+  </div> 
+</footer>
+
+<button id="backToTop" type="button" aria-label="Back to top" class="fixed bottom-28 right-7 z-40 w-12 h-12 rounded-full bg-flamedeep hover:bg-flame text-white shadow-soft flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-flame focus:ring-offset-2">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+<a href="https://wa.me/255799111141?text=Hello%20Asknetic%20Group,%20I%20would%20like%20to%20inquire%20about%20your%20services." 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20ba5a] text-white p-4 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-green-300 group"
+   aria-label="Chat with us on WhatsApp">
+  <i class="fa-brands fa-whatsapp text-3xl"></i>
+  <span class="absolute right-full mr-3 bg-slate-900 text-white text-xs font-semibold px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-md">
+    Chat with us on WhatsApp
+  </span>
+</a>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+
+  // Back-to-top button visibility
+  var toTop = $('backToTop');
+  function onScroll() {
+    var y = window.scrollY;
+    toTop.classList.toggle('show', y > 500);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+  toTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+  // Desktop Services dropdown
+  var btn = $('sectorsBtn'), menu = $('sectorsMenu'), arrow = $('sectorsArrow'), item = btn.parentElement;
+  function setMenu(open) {
+    menu.classList.toggle('hidden', !open);
+    btn.setAttribute('aria-expanded', open);
+    arrow.classList.toggle('rotate-180', open);
+  }
+  var canHover = window.matchMedia('(hover: hover)').matches;
+  btn.addEventListener('click', function () { setMenu(canHover ? true : menu.classList.contains('hidden')); });
+  if (canHover) {
+    item.addEventListener('mouseenter', function () { setMenu(true); });
+    item.addEventListener('mouseleave', function () { setMenu(false); });
+  }
+  document.addEventListener('click', function (e) { if (!item.contains(e.target)) setMenu(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { setMenu(false); setMobile(false); } });
+  menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+
+  // Mobile menu
+  var toggle = $('navtoggle'), mobile = $('mobilemenu'), icon = $('navtoggle-icon');
+  function setMobile(open) {
+    mobile.classList.toggle('hidden', !open);
+    toggle.setAttribute('aria-expanded', open);
+    icon.classList.toggle('fa-bars', !open);
+    icon.classList.toggle('fa-xmark', open);
+  }
+  toggle.addEventListener('click', function () { setMobile(mobile.classList.contains('hidden')); });
+  var mBtn = $('mobileSectorsBtn'), mMenu = $('mobileSectorsMenu'), mArrow = $('mobileSectorsArrow');
+  mBtn.addEventListener('click', function () {
+    var open = mMenu.classList.toggle('hidden') === false;
+    mBtn.setAttribute('aria-expanded', open);
+    mArrow.classList.toggle('rotate-180', open);
+  });
+  mobile.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setMobile(false); }); });
+  window.addEventListener('resize', function () { if (window.innerWidth >= 1024) setMobile(false); });
+
+  // Scroll reveal
+  var els = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('active'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.12 });
+    els.forEach(function (el) { io.observe(el); });
+  } else {
+    els.forEach(function (el) { el.classList.add('active'); });
+  }
+
+  // Footer year
+  $('footer-year').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
