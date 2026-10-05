@@ -29,6 +29,7 @@
           flame2: '#F4A05C',
           flamedeep: '#B85A18',
           navy: '#211C18',
+          navysoft: '#352D27',
         },
         fontFamily: {
           display: ['Outfit', 'sans-serif'],
@@ -100,7 +101,7 @@
 <body class="bg-cream text-ink font-sans antialiased overflow-x-hidden w-full">
 
 <!-- HEADER -->
-<header id="site-header" class="fixed top-0 inset-x-0 z-50 w-full transition-colors duration-300">
+<header id="site-header" class="sticky top-0 inset-x-0 z-50 w-full bg-navysoft border-b border-white/10 transition-shadow duration-300">
   <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 py-3 w-full">
   
   <a href="index.html" class="flex items-center gap-2.5 shrink-0 focus:outline-none">
@@ -115,14 +116,16 @@
       <a href="about-us.html" class="text-base font-semibold text-white hover:text-flame transition-colors py-1">About Us</a>
     </li>
     <li class="relative group">
-      <button id="sectorsBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="sectorsMenu" class="flex items-center gap-1.5 text-base font-semibold text-white hover:text-flame transition-colors py-1 focus:outline-none">
-        <span>Services</span>
-        <i id="sectorsArrow" class="fa-solid fa-chevron-down text-[10px] transition-transform duration-200"></i>
-      </button>
+      <div class="flex items-center gap-1.5">
+        <a href="services.html" class="text-base font-semibold text-white hover:text-flame transition-colors py-1">Services</a>
+        <button id="sectorsBtn" type="button" aria-label="Show service list" aria-haspopup="true" aria-expanded="false" aria-controls="sectorsMenu" class="flex items-center py-1 text-white hover:text-flame transition-colors focus:outline-none">
+          <i id="sectorsArrow" class="fa-solid fa-chevron-down text-[10px] transition-transform duration-200"></i>
+        </button>
+      </div>
       
       <!-- Fixed Hover Gap with Padding Bridge -->
       <div id="sectorsMenu" class="hidden absolute top-full left-1/2 -translate-x-1/2 pt-2 w-64 z-50">
-        <div class="bg-navy/95 backdrop-blur-xl border border-white/10 rounded-2xl p-2.5 flex flex-col gap-1 shadow-2xl">
+        <div class="bg-navysoft border border-white/10 rounded-2xl p-2.5 flex flex-col gap-1 shadow-2xl">
           <a href="services.html#ict" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">ICT Solutions</a>
           <a href="services.html#real-estate" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">Real Estate</a>
           <a href="services.html#agro" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">Agro Crops</a>
@@ -142,7 +145,7 @@
     </li>
   </ul>
  
-  <a href="contact.html" class="hidden lg:inline-flex items-center gap-2 bg-flamedeep hover:bg-black text-white px-6 py-2.5 rounded-full text-base font-semibold transition-all shadow-md hover:shadow-xl hover:-translate-y-0.5 shrink-0 shadow-flamedeep focus:outline-none focus:ring-2 focus:ring-flame focus:ring-offset-2">
+  <a href="contact.html" class="hidden lg:inline-flex items-center gap-2 bg-flame hover:bg-black text-white px-6 py-2.5 rounded-full text-base font-semibold transition-all shadow-md hover:shadow-xl hover:-translate-y-0.5 shrink-0 focus:outline-none focus:ring-2 focus:ring-flame focus:ring-offset-2">
     <span>Get in Touch</span>
   </a>
    
@@ -151,15 +154,17 @@
     </button>
 </nav>
  
-<div id="mobilemenu" class="hidden lg:hidden mx-4 mt-2 rounded-2xl bg-navy/95 backdrop-blur-xl border border-white/20 shadow-2xl px-6 py-4">
+<div id="mobilemenu" class="hidden lg:hidden mx-4 mt-2 rounded-2xl bg-navysoft border border-white/20 shadow-2xl px-6 py-4">
   <a href="index.html" class="block py-3 border-b border-white/10 text-base font-semibold text-white hover:text-flame transition-colors">Home</a>
   <a href="about-us.html" class="block py-3 border-b border-white/10 text-base font-semibold text-white hover:text-flame transition-colors">About Us</a>
   
   <div class="border-b border-white/10 py-3">
-    <button id="mobileSectorsBtn" type="button" aria-expanded="false" aria-controls="mobileSectorsMenu" class="flex items-center justify-between w-full text-base font-semibold text-white hover:text-flame transition-colors focus:outline-none">
-      <span>Services</span>
-      <i id="mobileSectorsArrow" class="fa-solid fa-chevron-down text-xs transition-transform duration-200"></i>
-    </button>
+    <div class="flex items-center justify-between w-full">
+      <a href="services.html" class="text-base font-semibold text-white hover:text-flame transition-colors">Services</a>
+      <button id="mobileSectorsBtn" type="button" aria-label="Show service list" aria-expanded="false" aria-controls="mobileSectorsMenu" class="w-8 h-8 -mr-2 flex items-center justify-center text-white hover:text-flame transition-colors focus:outline-none">
+        <i id="mobileSectorsArrow" class="fa-solid fa-chevron-down text-xs transition-transform duration-200"></i>
+      </button>
+    </div>
     
     <div id="mobileSectorsMenu" class="hidden pl-4 pt-4 flex flex-col gap-3 text-sm">
       <a href="services.html#ict" class="text-white/80 hover:text-flame transition-colors">ICT Solutions</a>
@@ -186,28 +191,28 @@
 
 <!-- HERO SECTION -->
 <section class="relative">
-  <div class="relative overflow-hidden bg-navy">
+  <div class="relative overflow-hidden bg-navysoft">
     <div
-      class="absolute inset-0 w-full h-full bg-cover bg-center scale-110"
+      class="absolute inset-0 w-full h-full bg-cover bg-top"
       style="background-image: url('images-icons/IMG_2562.PNG');"
       aria-hidden="true">
     </div>
 
-    <div class="absolute inset-0 bg-gradient-to-b from-navy/80 via-navy/70 to-navy/90"></div>
+    <div class="absolute inset-0 bg-navysoft/65"></div>
 
-    <div class="relative max-w-7xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24 pt-24 pb-14 md:pt-32 md:pb-16">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+    <div class="relative max-w-7xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24 pt-14 pb-20 md:pt-16 md:pb-16">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 min-h-[55vh] md:min-h-0 items-end md:items-center">
         
         <div class="reveal max-w-2xl text-center lg:text-left z-10">
-          <h1 class="font-display font-bold leading-[1.08] text-4xl md:text-6xl text-white">
+          <h1 class="font-display font-bold leading-[1.08] text-2xl sm:text-3xl md:text-4xl lg:text-6xl text-white">
            Building Strong Businesses<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-flame2 to-flame">Through Quality Services</span>
           </h1>
         </div>
 
         <div class="reveal relative flex items-center justify-center w-full max-w-md mx-auto lg:max-w-none my-8 lg:my-0">
-          <div class="relative w-[280px] h-[280px] sm:w-[380px] sm:h-[380px] lg:w-[420px] lg:h-[420px] rounded-full p-3 border-2 border-amber-400/40 bg-gradient-to-tr from-amber-500/20 to-transparent flex items-center justify-center shadow-2xl">
+          <div class="relative w-[200px] h-[200px] sm:w-[260px] sm:h-[260px] lg:w-[420px] lg:h-[420px] rounded-full p-3 border-2 border-amber-400/40 bg-gradient-to-tr from-amber-500/20 to-transparent flex items-center justify-center shadow-2xl">
             
-            <div class="w-full h-full rounded-full overflow-hidden relative border-4 border-white/20 bg-slate-900/90 flex items-center justify-center p-8 shadow-inner">
+            <div class="w-full h-full rounded-full overflow-hidden relative border-4 border-white/20 bg-slate-900/90 flex items-center justify-center p-5 lg:p-8 shadow-inner">
               <img 
                 src="images-icons/ask-logo-blvk.png" 
                 alt="Asknetic Logo" 
@@ -215,7 +220,7 @@
               />
             </div>
 
-            <div class="absolute -top-4 -left-2 sm:top-2 sm:-left-6 bg-white/15 backdrop-blur-xl border border-white/25 text-white px-4 py-2.5 rounded-2xl shadow-2xl flex items-center gap-3 animate-float">
+            <div class="absolute -top-4 -left-2 sm:top-2 sm:-left-6 bg-white/15 backdrop-blur-xl border border-white/25 text-white px-4 py-2.5 rounded-2xl shadow-2xl hidden md:flex items-center gap-3 animate-float">
               <div class="w-9 h-9 rounded-xl bg-flame/30 flex items-center justify-center text-flame font-bold text-sm">
                 <i class="fa-solid fa-calendar"></i>
               </div>
@@ -225,7 +230,7 @@
               </div>
             </div>
 
-            <div class="absolute top-8 -right-4 sm:top-12 sm:-right-8 bg-white/15 backdrop-blur-xl border border-white/25 text-white px-4 py-2.5 rounded-2xl shadow-2xl flex items-center gap-3 animate-float-delayed">
+            <div class="absolute top-8 -right-4 sm:top-12 sm:-right-8 bg-white/15 backdrop-blur-xl border border-white/25 text-white px-4 py-2.5 rounded-2xl shadow-2xl hidden md:flex items-center gap-3 animate-float-delayed">
               <div class="w-9 h-9 rounded-xl bg-amber-400/30 flex items-center justify-center text-amber-300 font-bold text-sm">
                 <i class="fa-solid fa-diagram-project"></i>
               </div>
@@ -235,7 +240,7 @@
               </div>
             </div>
 
-            <div class="absolute -bottom-2 -right-2 sm:bottom-4 sm:-right-6 bg-white/15 backdrop-blur-xl border border-white/25 text-white px-4 py-2.5 rounded-2xl shadow-2xl flex items-center gap-3 animate-float">
+            <div class="absolute -bottom-2 -right-2 sm:bottom-4 sm:-right-6 bg-white/15 backdrop-blur-xl border border-white/25 text-white px-4 py-2.5 rounded-2xl shadow-2xl hidden md:flex items-center gap-3 animate-float">
               <div class="w-9 h-9 rounded-xl bg-emerald-400/30 flex items-center justify-center text-emerald-300 font-bold text-sm">
                 <i class="fa-solid fa-clock"></i>
               </div>
@@ -245,7 +250,7 @@
               </div>
             </div>
 
-            <div class="absolute bottom-10 -left-6 sm:bottom-12 sm:-left-10 bg-white/15 backdrop-blur-xl border border-white/25 text-white px-4 py-2.5 rounded-2xl shadow-2xl flex items-center gap-3 animate-float-delayed">
+            <div class="absolute bottom-10 -left-6 sm:bottom-12 sm:-left-10 bg-white/15 backdrop-blur-xl border border-white/25 text-white px-4 py-2.5 rounded-2xl shadow-2xl hidden md:flex items-center gap-3 animate-float-delayed">
               <div class="w-9 h-9 rounded-xl bg-sky-400/30 flex items-center justify-center text-sky-300 font-bold text-sm">
                 <i class="fa-solid fa-earth-africa"></i>
               </div>
@@ -422,7 +427,7 @@
         <p class="text-slate-600 text-base md:text-lg leading-relaxed mb-8">
           We adhere to six basic core values that serve as the cornerstone of all the services we provide. These values are at the heart of our business model and provide you with the assurance that your business needs will be met and expectations exceeded.
         </p>
-        <a href="about-us.html" class="inline-flex items-center justify-center px-8 py-4 bg-flame hover:bg-black text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg shadow-orange-500/20 hover:shadow-orange-500/30 transition-all duration-300 hover:scale-105">
+        <a href="about-us.html" class="inline-flex items-center justify-center px-8 py-4 bg-flame hover:bg-black text-white font-bold text-xs uppercase tracking-wider rounded-full shadow-lg shadow-orange-500/20 hover:shadow-orange-500/30 transition-all duration-300 hover:scale-105">
           Read More
         </a>
       </div>
@@ -813,7 +818,7 @@
           </p>
         </div>
         <div>
-          <a href="contact.html" class="inline-flex items-center gap-2 px-6 py-3 bg-white text-flamedeep font-bold text-xs uppercase tracking-wider rounded-xl hover:bg-black hover:text-white transition-all duration-300 hover:scale-105 shadow-md">
+          <a href="contact.html" class="inline-flex items-center gap-2 px-6 py-3 bg-white text-flame font-bold text-xs uppercase tracking-wider rounded-full hover:bg-black hover:text-white transition-all duration-300 hover:scale-105 shadow-md">
             Work With Us
           </a>
         </div>
@@ -1026,9 +1031,9 @@
     if (siteHeader) {
       var handleHeaderScroll = function () {
         if (window.scrollY > 20) {
-          siteHeader.classList.add('bg-navy/95', 'backdrop-blur-xl', 'border-b', 'border-white/10', 'shadow-lg');
+          siteHeader.classList.add('shadow-lg');
         } else {
-          siteHeader.classList.remove('bg-navy/95', 'backdrop-blur-xl', 'border-b', 'border-white/10', 'shadow-lg');
+          siteHeader.classList.remove('shadow-lg');
         }
       };
       handleHeaderScroll();

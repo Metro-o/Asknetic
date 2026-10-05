@@ -25,6 +25,7 @@
           flame2: '#F4A05C',
           flamedeep: '#B85A18',
           navy: '#211C18',
+          navysoft: '#352D27',
         },
         fontFamily: {
           display: ['Outfit', 'sans-serif'],
@@ -93,29 +94,31 @@
 <body class="bg-cream text-ink font-sans antialiased overflow-x-hidden w-full">
 
   <!-- HEADER -->
-<header id="site-header" class="fixed top-0 inset-x-0 z-50 w-full transition-all duration-300">
-  <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 py-3.5 w-full">
+<header id="site-header" class="sticky top-0 inset-x-0 z-50 w-full bg-navysoft border-b border-white/10 transition-shadow duration-300">
+  <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 py-3 w-full">
   
-    <a href="index.html" class="flex items-center gap-2.5 shrink-0 focus:outline-none">
-      <img src="images-icons/ask-logo-blvk.png" alt="Asknetic Group Logo" class="h-16 md:h-18 w-auto max-w-full object-contain transition-transform duration-200 hover:scale-105">
-    </a>
-   
-    <ul id="navlinks" class="hidden lg:flex items-center gap-8 list-none m-0 p-0">
-      <li>
-        <a href="index.html" class="text-base font-semibold text-white/90 hover:text-flame transition-colors py-1">Home</a>
-      </li>
-      <li>
-        <a href="about-us.html" class="text-base font-semibold text-flame transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-flame" aria-current="page">About Us</a>
-      </li>
-      <li class="relative group">
-      <button id="sectorsBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="sectorsMenu" class="flex items-center gap-1.5 text-base font-semibold text-white hover:text-flame transition-colors py-1 focus:outline-none">
-        <span>Services</span>
-        <i id="sectorsArrow" class="fa-solid fa-chevron-down text-[10px] transition-transform duration-200"></i>
-      </button>
+  <a href="index.html" class="flex items-center gap-2.5 shrink-0 focus:outline-none">
+    <img src="images-icons/ask-logo-blvk.png" alt="Asknetic Group Logo" class="h-16 md:h-18 w-auto max-w-full object-contain scale-125 transition-transform duration-200 hover:scale-[1.3]">
+  </a>
+ 
+  <ul id="navlinks" class="hidden lg:flex items-center gap-8 list-none m-0 p-0">
+    <li>
+      <a href="index.html" class="text-base font-semibold text-white hover:text-flame transition-colors py-1">Home</a>
+    </li>
+    <li>
+      <a href="about-us.html" class="text-base font-semibold text-white hover:text-flame transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-flame" aria-current="page">About Us</a>
+    </li>
+    <li class="relative group">
+      <div class="flex items-center gap-1.5">
+        <a href="services.html" class="text-base font-semibold text-white hover:text-flame transition-colors py-1">Services</a>
+        <button id="sectorsBtn" type="button" aria-label="Show service list" aria-haspopup="true" aria-expanded="false" aria-controls="sectorsMenu" class="flex items-center py-1 text-white hover:text-flame transition-colors focus:outline-none">
+          <i id="sectorsArrow" class="fa-solid fa-chevron-down text-[10px] transition-transform duration-200"></i>
+        </button>
+      </div>
       
       <!-- Fixed Hover Gap with Padding Bridge -->
       <div id="sectorsMenu" class="hidden absolute top-full left-1/2 -translate-x-1/2 pt-2 w-64 z-50">
-        <div class="bg-navy/95 backdrop-blur-xl border border-white/10 rounded-2xl p-2.5 flex flex-col gap-1 shadow-2xl">
+        <div class="bg-navysoft border border-white/10 rounded-2xl p-2.5 flex flex-col gap-1 shadow-2xl">
           <a href="services.html#ict" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">ICT Solutions</a>
           <a href="services.html#real-estate" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">Real Estate</a>
           <a href="services.html#agro" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">Agro Crops</a>
@@ -130,59 +133,61 @@
         </div>
       </div>
     </li>
-      <li>
-        <a href="contact.html" class="text-base font-semibold text-white/90 hover:text-flame transition-colors py-1">Contact Us</a>
-      </li>
-    </ul>
+    <li>
+      <a href="contact.html" class="text-base font-semibold text-white hover:text-flame transition-colors py-1">Contact Us</a>
+    </li>
+  </ul>
+ 
+  <a href="contact.html" class="hidden lg:inline-flex items-center gap-2 bg-flame hover:bg-black text-white px-6 py-2.5 rounded-full text-base font-semibold transition-all shadow-md hover:shadow-xl hover:-translate-y-0.5 shrink-0 focus:outline-none focus:ring-2 focus:ring-flame focus:ring-offset-2">
+    <span>Get in Touch</span>
+  </a>
    
-    <a href="contact.html" class="hidden lg:inline-flex items-center gap-2 bg-flame hover:bg-black text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all hover:scale-105 shadow-md hover:shadow-xl hover:-translate-y-0.5 shrink-0 focus:outline-none focus:ring-2 focus:ring-flame focus:ring-offset-2">
-      <span>Get in Touch</span>
-    </a>
-     
-    <button id="navtoggle" type="button" class="lg:hidden w-10 h-10 rounded-full hover:bg-black hover:text-white flex items-center justify-center text-white transition-all hover:scale-105 focus:outline-none" aria-label="Toggle navigation menu" aria-haspopup="true" aria-expanded="false" aria-controls="mobilemenu">
-      <i class="fa-solid fa-bars" id="navtoggle-icon"></i>
+    <button id="navtoggle" type="button" class="lg:hidden w-10 h-10 rounded-full hover:bg-black hover:text-white flex items-center justify-center text-flame transition-all hover:scale-105 focus:outline-none" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobilemenu">
+      <i class="fa-solid fa-bars shadow-lg shadow-flame" id="navtoggle-icon"></i>
     </button>
-  </nav>
-   
-  <div id="mobilemenu" class="hidden lg:hidden mx-4 mt-2 rounded-2xl bg-navy/95 backdrop-blur-xl border border-white/10 shadow-2xl px-6 py-4 max-h-[80vh] overflow-y-auto">
-    <a href="index.html" class="block py-3 border-b border-white/10 text-base font-semibold text-white hover:text-flame transition-colors">Home</a>
-    <a href="about-us.html" class="block py-3 border-b border-white/10 text-base font-semibold text-flame transition-colors">About Us</a>
-    
-    <div class="border-b border-white/10 py-3">
-      <button id="mobileSectorsBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="mobileSectorsMenu" class="flex items-center justify-between w-full text-base font-semibold text-white hover:text-flame transition-colors focus:outline-none">
-        <span>Services</span>
+</nav>
+ 
+<div id="mobilemenu" class="hidden lg:hidden mx-4 mt-2 rounded-2xl bg-navysoft border border-white/20 shadow-2xl px-6 py-4">
+  <a href="index.html" class="block py-3 border-b border-white/10 text-base font-semibold text-white hover:text-flame transition-colors">Home</a>
+  <a href="about-us.html" class="block py-3 border-b border-white/10 text-base font-semibold text-white hover:text-flame transition-colors">About Us</a>
+  
+  <div class="border-b border-white/10 py-3">
+    <div class="flex items-center justify-between w-full">
+      <a href="services.html" class="text-base font-semibold text-white hover:text-flame transition-colors">Services</a>
+      <button id="mobileSectorsBtn" type="button" aria-label="Show service list" aria-expanded="false" aria-controls="mobileSectorsMenu" class="w-8 h-8 -mr-2 flex items-center justify-center text-white hover:text-flame transition-colors focus:outline-none">
         <i id="mobileSectorsArrow" class="fa-solid fa-chevron-down text-xs transition-transform duration-200"></i>
       </button>
-      
-      <div id="mobileSectorsMenu" class="hidden pl-4 pt-4 flex flex-col gap-3 text-sm">
-        <a href="services.html#ict" class="text-slate-300 hover:text-flame transition-colors">ICT Solutions</a>
-        <a href="services.html#real-estate" class="text-slate-300 hover:text-flame transition-colors">Real Estate</a>
-        <a href="services.html#agro" class="text-slate-300 hover:text-flame transition-colors">Agro Crops</a>
-        <a href="services.html#maintenance" class="text-slate-300 hover:text-flame transition-colors">Building Maintenance</a>
-        <a href="services.html#car-hire" class="text-slate-300 hover:text-flame transition-colors">Car Hire</a>
-        <a href="services.html#travel" class="text-slate-300 hover:text-flame transition-colors">Travel & Visa Assistance</a>
-        <a href="services.html#supplies" class="text-slate-300 hover:text-flame transition-colors">General Supplies</a>
-      </div>
     </div>
-   
-    <a href="contact.html" class="block py-3 border-b border-white/10 text-base font-semibold text-white hover:text-flame transition-colors">Contact Us</a>
     
-    <div class="pt-5 pb-2">
-      <a href="contact.html" class="flex items-center justify-center w-full bg-flame hover:bg-black text-white py-3 rounded-full text-base font-semibold transition-all hover:scale-105 shadow-lg">
-        <span>Get in Touch</span>
-      </a>
+    <div id="mobileSectorsMenu" class="hidden pl-4 pt-4 flex flex-col gap-3 text-sm">
+      <a href="services.html#ict" class="text-white/80 hover:text-flame transition-colors">ICT Solutions</a>
+      <a href="services.html#real-estate" class="text-white/80 hover:text-flame transition-colors">Real Estate</a>
+      <a href="services.html#agro" class="text-white/80 hover:text-flame transition-colors">Agro Crops</a>
+      <a href="services.html#maintenance" class="text-white/80 hover:text-flame transition-colors">Building Maintenance</a>
+      <a href="services.html#car-hire" class="text-white/80 hover:text-flame transition-colors">Car Hire</a>
+      <a href="services.html#travel" class="text-white/80 hover:text-flame transition-colors">Travel & Visa Assistance</a>
+      <a href="services.html#supplies" class="text-white/80 hover:text-flame transition-colors">General Supplies</a>
     </div>
   </div>
+ 
+  <a href="contact.html" class="block py-3 border-b border-white/10 text-base font-semibold text-white hover:text-flame transition-colors">Contact Us</a>
+  
+  <div class="pt-5 pb-2">
+    <a href="contact.html" class="flex items-center justify-center w-full bg-flame text-white py-3 rounded-full text-base font-semibold hover:bg-black transition-all hover:scale-105 shadow-2xl shadow-amber-400">
+      Get in Touch
+    </a>
+  </div>
+</div>
 </header>
 
 <main id="top">
 
   <!-- HERO -->
-  <section class="relative bg-navy overflow-hidden pt-36 pb-32 md:pt-44 md:pb-40">
+  <section class="relative bg-navy overflow-hidden pt-14 pb-32 md:pt-20 md:pb-40">
     <div class="absolute inset-0 bg-cover bg-center opacity-90" style="background-image:url('images-icons/hero2.jpeg');"></div>
     <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-flame/30 blur-3xl"></div>
     <div class="absolute -bottom-32 -right-16 w-[28rem] h-[28rem] rounded-full bg-flame2/20 blur-3xl"></div>
-    <div class="absolute inset-0 bg-gradient-to-b from-navy/60 to-navy"></div>
+    <div class="absolute inset-0 bg-navysoft/65"></div>
 
     <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24 text-center fade-up">
       <nav aria-label="Breadcrumb" class="text-xs text-white/60 mb-6">
@@ -762,9 +767,9 @@
     if (siteHeader) {
       var handleHeaderScroll = function () {
         if (window.scrollY > 20) {
-          siteHeader.classList.add('bg-navy/90', 'backdrop-blur-md', 'border-b', 'border-white/10', 'shadow-lg');
+          siteHeader.classList.add('shadow-lg');
         } else {
-          siteHeader.classList.remove('bg-navy/90', 'backdrop-blur-md', 'border-b', 'border-white/10', 'shadow-lg');
+          siteHeader.classList.remove('shadow-lg');
         }
       };
       handleHeaderScroll();

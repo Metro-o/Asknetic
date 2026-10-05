@@ -29,6 +29,7 @@
           flame2: '#F4A05C',
           flamedeep: '#B85A18',
           navy: '#211C18',
+          navysoft: '#352D27',
         },
         fontFamily: {
           display: ['Outfit', 'sans-serif'],
@@ -111,29 +112,31 @@
 <body class="bg-cream text-ink font-sans antialiased overflow-x-hidden w-full">
 
 <!-- HEADER -->
-<header id="site-header" class="fixed top-0 inset-x-0 z-50 w-full bg-white/90 backdrop-blur-xl shadow-card">
+<header id="site-header" class="sticky top-0 inset-x-0 z-50 w-full bg-navysoft border-b border-white/10 transition-shadow duration-300">
   <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 py-3 w-full">
   
   <a href="index.html" class="flex items-center gap-2.5 shrink-0 focus:outline-none">
-    <img src="images-icons/ask-logo-white.png" alt="Asknetic Group Logo" class="h-16 w-auto max-w-full object-contain transition-transform duration-200 hover:scale-105">
+    <img src="images-icons/ask-logo-blvk.png" alt="Asknetic Group Logo" class="h-16 md:h-18 w-auto max-w-full object-contain scale-125 transition-transform duration-200 hover:scale-[1.3]">
   </a>
  
   <ul id="navlinks" class="hidden lg:flex items-center gap-8 list-none m-0 p-0">
     <li>
-      <a href="index.html" class="text-base font-semibold text-black hover:text-flame transition-colors py-1">Home</a>
+      <a href="index.html" class="text-base font-semibold text-white hover:text-flame transition-colors py-1">Home</a>
     </li>
     <li>
-      <a href="about-us.html" class="text-base font-semibold text-black hover:text-flame transition-colors py-1">About Us</a>
+      <a href="about-us.html" class="text-base font-semibold text-white hover:text-flame transition-colors py-1">About Us</a>
     </li>
     <li class="relative group">
-      <button id="sectorsBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="sectorsMenu" class="flex items-center gap-1.5 text-base font-semibold text-flame hover:text-flamedeep transition-colors py-1 border-b-2 border-flame focus:outline-none">
-        <span>Services</span>
-        <i id="sectorsArrow" class="fa-solid fa-chevron-down text-[10px] transition-transform duration-200"></i>
-      </button>
+      <div class="flex items-center gap-1.5">
+        <a href="services.html" class="text-base font-semibold text-white hover:text-flame transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-flame">Services</a>
+        <button id="sectorsBtn" type="button" aria-label="Show service list" aria-haspopup="true" aria-expanded="false" aria-controls="sectorsMenu" class="flex items-center py-1 text-white hover:text-flame transition-colors focus:outline-none">
+          <i id="sectorsArrow" class="fa-solid fa-chevron-down text-[10px] transition-transform duration-200"></i>
+        </button>
+      </div>
       
       <!-- Fixed Hover Gap with Padding Bridge -->
       <div id="sectorsMenu" class="hidden absolute top-full left-1/2 -translate-x-1/2 pt-2 w-64 z-50">
-        <div class="bg-navy/95 backdrop-blur-xl border border-white/10 rounded-2xl p-2.5 flex flex-col gap-1 shadow-2xl">
+        <div class="bg-navysoft border border-white/10 rounded-2xl p-2.5 flex flex-col gap-1 shadow-2xl">
           <a href="ict.html" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">ICT Solutions</a>
           <a href="real-estate.html" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">Real Estate</a>
           <a href="agro.html" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">Agro Crops</a>
@@ -142,37 +145,37 @@
           <a href="travel.html" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">Travel & Visa Assistance</a>
           <a href="supplies.html" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">General Supplies</a>
         <div class="my-1 border-t border-white/10"></div>
-        <a href="services.html" class="px-3 py-2 rounded-xl text-xs font-semibold text-flame hover:bg-flame/10 hover:text-flamedeep transition-all">
+        <a href="services.html" class="px-3 py-2 rounded-xl text-xs font-semibold text-flame hover:bg-black hover:text-white transition-all hover:scale-105">
           <span>View All Services</span>
-          <i class="fa-solid fa-arrow-right text-xs ml-1"></i>
         </a>
         </div>
       </div>
     </li>
     <li>
-      <a href="contact.html" class="text-base font-semibold text-black hover:text-flame transition-colors py-1">Contact Us</a>
+      <a href="contact.html" class="text-base font-semibold text-white hover:text-flame transition-colors py-1">Contact Us</a>
     </li>
   </ul>
  
-  <a href="contact.html" class="hidden lg:inline-flex items-center gap-2 bg-flamedeep hover:bg-flame text-white px-6 py-2.5 rounded-full text-base font-semibold transition-all shadow-md hover:shadow-xl hover:-translate-y-0.5 shrink-0 shadow-flamedeep focus:outline-none focus:ring-2 focus:ring-flame focus:ring-offset-2">
+  <a href="contact.html" class="hidden lg:inline-flex items-center gap-2 bg-flame hover:bg-black text-white px-6 py-2.5 rounded-full text-base font-semibold transition-all shadow-md hover:shadow-xl hover:-translate-y-0.5 shrink-0 focus:outline-none focus:ring-2 focus:ring-flame focus:ring-offset-2">
     <span>Get in Touch</span>
-    <i class="fa-solid fa-arrow-right text-xs ml-1"></i>
   </a>
    
-    <button id="navtoggle" type="button" class="lg:hidden w-10 h-10 rounded-full hover:bg-flame/10 flex items-center justify-center text-flame transition-colors focus:outline-none" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobilemenu">
-      <i class="fa-solid fa-bars" id="navtoggle-icon"></i>
+    <button id="navtoggle" type="button" class="lg:hidden w-10 h-10 rounded-full hover:bg-black hover:text-white flex items-center justify-center text-flame transition-all hover:scale-105 focus:outline-none" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobilemenu">
+      <i class="fa-solid fa-bars shadow-lg shadow-flame" id="navtoggle-icon"></i>
     </button>
 </nav>
  
-<div id="mobilemenu" class="hidden lg:hidden mx-4 mt-2 rounded-2xl bg-navy/95 backdrop-blur-xl border border-white/20 shadow-2xl px-6 py-4">
+<div id="mobilemenu" class="hidden lg:hidden mx-4 mt-2 rounded-2xl bg-navysoft border border-white/20 shadow-2xl px-6 py-4">
   <a href="index.html" class="block py-3 border-b border-white/10 text-base font-semibold text-white hover:text-flame transition-colors">Home</a>
   <a href="about-us.html" class="block py-3 border-b border-white/10 text-base font-semibold text-white hover:text-flame transition-colors">About Us</a>
   
   <div class="border-b border-white/10 py-3">
-    <button id="mobileSectorsBtn" type="button" aria-expanded="false" aria-controls="mobileSectorsMenu" class="flex items-center justify-between w-full text-base font-semibold text-white hover:text-flame transition-colors focus:outline-none">
-      <span>Services</span>
-      <i id="mobileSectorsArrow" class="fa-solid fa-chevron-down text-xs transition-transform duration-200"></i>
-    </button>
+    <div class="flex items-center justify-between w-full">
+      <a href="services.html" class="text-base font-semibold text-white hover:text-flame transition-colors">Services</a>
+      <button id="mobileSectorsBtn" type="button" aria-label="Show service list" aria-expanded="false" aria-controls="mobileSectorsMenu" class="w-8 h-8 -mr-2 flex items-center justify-center text-white hover:text-flame transition-colors focus:outline-none">
+        <i id="mobileSectorsArrow" class="fa-solid fa-chevron-down text-xs transition-transform duration-200"></i>
+      </button>
+    </div>
     
     <div id="mobileSectorsMenu" class="hidden pl-4 pt-4 flex flex-col gap-3 text-sm">
       <a href="ict.html" class="text-white/80 hover:text-flame transition-colors">ICT Solutions</a>
@@ -188,7 +191,7 @@
   <a href="contact.html" class="block py-3 border-b border-white/10 text-base font-semibold text-white hover:text-flame transition-colors">Contact Us</a>
   
   <div class="pt-5 pb-2">
-    <a href="contact.html" class="flex items-center justify-center w-full bg-flame text-white py-3 rounded-full text-base font-semibold hover:bg-flamedeep transition-colors shadow-2xl shadow-amber-400">
+    <a href="contact.html" class="flex items-center justify-center w-full bg-flame text-white py-3 rounded-full text-base font-semibold hover:bg-black transition-all hover:scale-105 shadow-2xl shadow-amber-400">
       Get in Touch
     </a>
   </div>
@@ -196,8 +199,8 @@
 </header>
 
 <main>
-  <section class="relative isolate overflow-hidden bg-slate-900 bg-cover bg-center bg-no-repeat pt-36 pb-14 md:pt-44 md:pb-20" style="background-image: url('images-icons/travel-agency.webp');">
-    <div class="absolute inset-0 bg-slate-950/75"></div>
+  <section class="relative isolate overflow-hidden bg-slate-900 bg-cover bg-center bg-no-repeat pt-14 pb-14 md:pt-20 md:pb-20" style="background-image: url('images-icons/travel-agency.webp');">
+    <div class="absolute inset-0 bg-navysoft/65"></div>
     <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24">
       <nav aria-label="Breadcrumb" class="reveal text-sm text-slate-300 mb-6 flex flex-wrap items-center gap-2">
         <a href="index.html" class="hover:text-flame transition-colors">Home</a><i class="fa-solid fa-chevron-right text-[9px]"></i>
@@ -207,10 +210,6 @@
       <span class="reveal w-16 h-16 rounded-2xl bg-flame text-white flex items-center justify-center text-2xl mb-6" style="--d:50ms"><i class="fa-solid fa-passport"></i></span>
       <h1 class="reveal font-display font-extrabold text-4xl md:text-6xl leading-[1.08] text-white max-w-3xl" style="--d:100ms">Travel & Visa Assistance</h1>
       <p class="reveal text-slate-200 text-lg md:text-xl leading-relaxed max-w-2xl mt-6" style="--d:150ms">Help with the paperwork and bookings that come before a trip.</p>
-      <div class="reveal flex flex-wrap gap-3 mt-10" style="--d:200ms">
-        <a href="contact.html" class="inline-flex items-center gap-2 bg-flamedeep hover:bg-flame text-white px-7 py-3.5 rounded-full font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-flame focus:ring-offset-2">Enquire about this service<i class="fa-solid fa-arrow-right text-xs"></i></a>
-        <a href="services.html" class="inline-flex items-center gap-2 border border-white/30 bg-white/10 hover:bg-white/20 text-white px-7 py-3.5 rounded-full font-semibold transition-colors">All services</a>
-      </div>
     </div>
   </section>
 
@@ -226,6 +225,19 @@
     </div>
   </section>
 
+  <section class="bg-flame/10 py-14 md:py-16">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+      <div class="reveal">
+        <h2 class="font-display font-bold text-2xl md:text-3xl">Interested in Travel & Visa Assistance?</h2>
+        <p class="text-inksoft mt-2">Tell us what you are trying to get done and we will reply with next steps.</p>
+      </div>
+      <div class="reveal flex flex-wrap gap-3 shrink-0">
+        <a href="contact.html" class="inline-flex items-center gap-2 bg-flame hover:bg-black text-white px-7 py-3.5 rounded-full font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-flame focus:ring-offset-2">Enquire about this service<i class="fa-solid fa-arrow-right text-xs"></i></a>
+        <a href="services.html" class="inline-flex items-center gap-2 bg-flame hover:bg-black text-white px-7 py-3.5 rounded-full font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-flame focus:ring-offset-2">All services</a>
+      </div>
+    </div>
+  </section>
+
   <section class="bg-white border-t border-ink/10 py-14 md:py-16">
     <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24">
       <h2 class="reveal font-display font-bold text-xl md:text-2xl mb-6">Our other services</h2>
@@ -233,15 +245,6 @@
     </div>
   </section>
 
-  <section class="bg-navy text-white py-16">
-    <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-      <div class="reveal">
-        <h2 class="font-display font-bold text-2xl md:text-3xl">Interested in Travel & Visa Assistance?</h2>
-        <p class="text-white/70 mt-2">Tell us what you are trying to get done and we will reply with next steps.</p>
-      </div>
-      <a href="contact.html" class="reveal inline-flex items-center gap-2 bg-flame hover:bg-flame2 text-white px-7 py-3.5 rounded-full font-semibold transition-colors shrink-0 self-start md:self-auto">Contact us<i class="fa-solid fa-arrow-right text-xs"></i></a>
-    </div>
-  </section>
 </main>
 
 <footer id="contact" class="relative bg-slate-950 text-slate-400 pt-0 pb-6 overflow-hidden">
@@ -341,7 +344,7 @@
   </div> 
 </footer>
 
-<button id="backToTop" type="button" aria-label="Back to top" class="fixed bottom-28 right-7 z-40 w-12 h-12 rounded-full bg-flamedeep hover:bg-flame text-white shadow-soft flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-flame focus:ring-offset-2">
+<button id="backToTop" type="button" aria-label="Back to top" class="fixed bottom-28 right-7 z-40 w-12 h-12 rounded-full bg-flame hover:bg-black text-white shadow-soft flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-flame focus:ring-offset-2">
   <i class="fa-solid fa-arrow-up"></i>
 </button>
 <a href="https://wa.me/255767911211?text=Hello%20Asknetic%20Group,%20I%20would%20like%20to%20inquire%20about%20your%20services." 
@@ -370,7 +373,7 @@
   toTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
 
   // Desktop Services dropdown
-  var btn = $('sectorsBtn'), menu = $('sectorsMenu'), arrow = $('sectorsArrow'), item = btn.parentElement;
+  var btn = $('sectorsBtn'), menu = $('sectorsMenu'), arrow = $('sectorsArrow'), item = btn.closest('li');
   function setMenu(open) {
     menu.classList.toggle('hidden', !open);
     btn.setAttribute('aria-expanded', open);
