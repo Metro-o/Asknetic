@@ -219,31 +219,45 @@
 
   <!-- WHO WE ARE -->
   <section class="py-20 md:py-28 bg-cream">
-    <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24 grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+  <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24 grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
 
-      <div class="fade-up">
-        <span class="text-xs font-bold tracking-widest uppercase text-flamedeep bg-orange-100 px-4 py-1.5 rounded-full inline-block mb-5">Who We Are</span>
-        <h2 class="font-display font-bold text-3xl md:text-5xl text-ink leading-tight mb-6">Built to secure opportunity across Tanzania.</h2>
-        <div class="space-y-4 text-inksoft leading-relaxed">
-          <p>Asknetic Enterprises Ltd was established in 2023 as a group of companies in Tanzania, located in the commercial capital, Dar es Salaam, with the intention of securing lucrative business and investment opportunities within Tanzania.</p>
-          <p>We strive to provide products, services and brands that go well with our customers' choices. Our range of services spans medical services, car hire, agro crop, ICT and digital solutions, building maintenance, real estate, general supplies, and air travel agency and visa assistance, along with products and brands that are safe for the environment and for consumers' health.</p>
-          <p>We pride ourselves on employing the best and brightest individuals, using the highest quality materials and the latest construction methods, so our customers receive the level of quality and value they deserve.</p>
-        </div>
+    <!-- Content Column -->
+    <div class="fade-up">
+      <span class="text-xs font-bold tracking-widest uppercase text-flamedeep bg-orange-100 px-4 py-1.5 rounded-full inline-block mb-5">Who We Are</span>
+      <h2 class="font-display font-bold text-3xl md:text-5xl text-ink leading-tight mb-6">Built to secure opportunity across Tanzania.</h2>
+      
+      <div class="space-y-4 text-inksoft leading-relaxed mb-8">
+        <p>Asknetic Enterprises Ltd was established in 2023 as a group of companies in Tanzania, located in the commercial capital, Dar es Salaam, with the intention of securing lucrative business and investment opportunities within Tanzania.</p>
+        <p>We strive to provide products, services and brands that go well with our customers' choices. Our range of services spans medical services, car hire, agro crop, ICT and digital solutions, building maintenance, real estate, general supplies, and air travel agency and visa assistance, along with products and brands that are safe for the environment and for consumers' health.</p>
+        <p>We pride ourselves on employing the best and brightest individuals, using the highest quality materials and the latest construction methods, so our customers receive the level of quality and value they deserve.</p>
       </div>
 
-      <div class="relative fade-up">
-        <div class="absolute -top-5 -left-5 w-full h-full rounded-[2rem] border-2 border-flame/40"></div>
-        <div class="relative rounded-[2rem] overflow-hidden shadow-soft">
-          <img src="/images-icons/officeman.jpg" alt="Asknetic Group corporate office" class="w-full h-full object-cover aspect-[4/5]" loading="lazy">
-        </div>
-        <div class="absolute -bottom-6 right-4 sm:-right-6 bg-navy text-white rounded-2xl shadow-xl px-6 py-5 max-w-[16rem] border border-white/10">
-          <p class="text-[11px] font-semibold uppercase tracking-widest text-flame2 mb-1">Head Office</p>
-          <p class="text-sm text-slate-300 leading-snug">Peninsula Noble Center, Oysterbay, Dar es Salaam</p>
-        </div>
-      </div>
-
+      <!-- Action Button (Placed cleanly under the paragraph text) -->
+      <a href="Asknetic-Company-Profile.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-flame hover:bg-black text-white px-6 py-3.5 rounded-full text-sm font-semibold transition-all hover:scale-105 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-flame focus:ring-offset-2">
+        <i class="fa-solid fa-file-pdf" aria-hidden="true"></i>
+        <span>Download Company Profile</span>
+      </a>
     </div>
-  </section>
+
+    <!-- Visual / Image Column -->
+    <div class="relative fade-up mt-8 lg:mt-0">
+      <!-- Decorative Border Behind Image -->
+      <div class="absolute -top-5 -left-5 w-full h-full rounded-[2rem] border-2 border-flame/40 pointer-events-none"></div>
+      
+      <!-- Main Image Container -->
+      <div class="relative rounded-[2rem] overflow-hidden shadow-soft">
+        <img src="/images-icons/officeman.jpg" alt="Asknetic Group corporate office" class="w-full h-full object-cover aspect-[4/5]" loading="lazy" onerror="this.closest('.relative').style.display='none'">
+      </div>
+
+      <!-- Floating Badge -->
+      <div class="absolute -bottom-6 right-4 sm:-right-6 bg-navy text-white rounded-2xl shadow-xl px-6 py-5 max-w-[16rem] border border-white/10 z-10">
+        <p class="text-[11px] font-semibold uppercase tracking-widest text-flame2 mb-1">Head Office</p>
+        <p class="text-sm text-slate-300 leading-snug">Peninsula Noble Center, Oysterbay, Dar es Salaam</p>
+      </div>
+    </div>
+
+  </div>
+</section>
 
   <!-- MISSION & VISION -->
   <section class="py-12 md:py-16 bg-flame/10 relative overflow-hidden">
