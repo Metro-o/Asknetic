@@ -1,0 +1,11 @@
+# Real mail/SMTP credentials - never commit (only private/mail-config.example.php is tracked)
+mail-config.php
+private/*
+!private/mail-config.example.php
+!private/README.md
+.env
+.env.*
+
+# Composer / manually uploaded PHPMailer
+vendor/
+PHPMailer/

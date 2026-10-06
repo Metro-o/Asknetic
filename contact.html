@@ -204,7 +204,7 @@
   <!-- HERO + CONTACT INFORMATION (arched image spans both) -->
   <section class="relative">
     <div class="absolute inset-x-0 top-0 h-[400px] lg:h-[340px] bg-gradient-to-br from-[#5a3314] via-navysoft to-navysoft"></div>
-    <div class="relative max-w-7xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24 pt-14 lg:pt-16 grid lg:grid-cols-2 gap-x-14 gap-y-10">
+    <div class="relative max-w-7xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24 pt-14 lg:pt-16 grid lg:grid-cols-[minmax(0,1fr)_380px] gap-x-10 xl:gap-x-14 gap-y-10">
 
       <div class="lg:col-start-1 lg:row-start-1 pb-4 lg:pb-14">
         <h1 class="font-display font-extrabold text-5xl md:text-6xl leading-[1.05] text-white">Contact Us</h1>
@@ -225,7 +225,7 @@
     Call, write or visit us. We are based in Oysterbay, Dar es Salaam.
   </p>
 
-  <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-2 gap-x-6 gap-y-10 mt-10 text-center">
+  <div class="grid grid-cols-1 md:grid-cols-[auto_auto_auto] md:justify-between gap-x-6 gap-y-10 mt-10 text-center">
 
     <!-- Phone Block -->
     <div class="reveal flex flex-col items-center" style="--d:100ms">
@@ -233,8 +233,8 @@
         <i class="fa-solid fa-phone" aria-hidden="true"></i>
       </span>
       <div class="flex flex-col gap-1">
-        <a href="tel:+255767911211" class="font-display font-bold text-ink hover:text-flame transition-colors">+255 767 911 211</a>
-        <a href="tel:+255655911211" class="font-display font-bold text-ink hover:text-flame transition-colors">+255 655 911 211</a>
+        <a href="tel:+255767911211" class="font-display font-bold text-ink hover:text-flame transition-colors whitespace-nowrap">+255 767 911 211</a>
+        <a href="tel:+255655911211" class="font-display font-bold text-ink hover:text-flame transition-colors whitespace-nowrap">+255 655 911 211</a>
       </div>
       <span class="text-inksoft text-xs mt-2">Call us</span>
     </div>
@@ -249,7 +249,7 @@
     </div>
 
     <!-- Location Block -->
-    <div class="reveal flex flex-col items-center lg:col-span-2" style="--d:260ms">
+    <div class="reveal flex flex-col items-center" style="--d:260ms">
       <span class="w-12 h-12 rounded-t-[1.5rem] rounded-b-lg bg-flamedeep text-white flex items-center justify-center mb-4 shrink-0 shadow-sm">
         <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
       </span>
@@ -269,20 +269,24 @@
       <div class="reveal rounded-2xl bg-gradient-to-br from-[#4a2a12] via-navy to-navy p-7 md:p-9 shadow-soft">
         <h2 class="font-display font-bold text-2xl text-white">Get In Touch!</h2>
         <p class="text-slate-300 text-sm leading-relaxed mt-3 max-w-sm">Send us a message and we will reply with next steps.</p>
-        <form id="contactForm" class="mt-7 space-y-4" novalidate>
+        <form id="contactForm" action="/api/contact.php" method="POST" class="mt-7 space-y-4">
+          <div class="hidden" aria-hidden="true">
+            <label for="cf-bot">Leave this field empty</label>
+            <input id="cf-bot" name="bot_field" type="text" tabindex="-1" autocomplete="off">
+          </div>
           <div>
             <label for="cf-email" class="sr-only">Email</label>
-            <input id="cf-email" name="email" type="email" required autocomplete="email" placeholder="Email" class="w-full rounded-full bg-transparent border border-white/40 px-5 py-3 text-sm text-white placeholder-white/60 focus:outline-none focus:border-flame focus:ring-2 focus:ring-flame/50">
+            <input id="cf-email" name="email" type="email" required maxlength="254" autocomplete="email" placeholder="Email" class="w-full rounded-full bg-transparent border border-white/40 px-5 py-3 text-sm text-white placeholder-white/60 focus:outline-none focus:border-flame focus:ring-2 focus:ring-flame/50">
           </div>
           <div>
             <label for="cf-name" class="sr-only">Name</label>
-            <input id="cf-name" name="name" type="text" required autocomplete="name" placeholder="Name" class="w-full rounded-full bg-transparent border border-white/40 px-5 py-3 text-sm text-white placeholder-white/60 focus:outline-none focus:border-flame focus:ring-2 focus:ring-flame/50">
+            <input id="cf-name" name="name" type="text" required maxlength="100" autocomplete="name" placeholder="Name" class="w-full rounded-full bg-transparent border border-white/40 px-5 py-3 text-sm text-white placeholder-white/60 focus:outline-none focus:border-flame focus:ring-2 focus:ring-flame/50">
           </div>
           <div>
             <label for="cf-message" class="sr-only">Message</label>
-            <textarea id="cf-message" name="message" required rows="5" placeholder="Message" class="w-full rounded-3xl bg-transparent border border-white/40 px-5 py-4 text-sm text-white placeholder-white/60 focus:outline-none focus:border-flame focus:ring-2 focus:ring-flame/50 resize-none"></textarea>
+            <textarea id="cf-message" name="message" required maxlength="5000" rows="5" placeholder="Message" class="w-full rounded-3xl bg-transparent border border-white/40 px-5 py-4 text-sm text-white placeholder-white/60 focus:outline-none focus:border-flame focus:ring-2 focus:ring-flame/50 resize-none"></textarea>
           </div>
-          <button type="submit" class="inline-flex items-center gap-2 rounded-full bg-flame hover:bg-black text-white px-7 py-3 text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-flame2 focus:ring-offset-2 focus:ring-offset-navy">Send message<i class="fa-solid fa-arrow-right text-xs"></i></button>
+          <button id="cf-submit" type="submit" class="inline-flex items-center gap-2 rounded-full bg-flame hover:bg-black text-white px-7 py-3 text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-flame2 focus:ring-offset-2 focus:ring-offset-navy disabled:opacity-70 disabled:cursor-wait disabled:hover:bg-flame"><span id="cf-submit-label">Send message</span><i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i></button>
           <p id="cf-status" role="status" aria-live="polite" class="text-sm text-slate-200 min-h-[1.25rem]"></p>
         </form>
       </div>
@@ -292,13 +296,6 @@
         <p class="reveal text-inksoft text-sm md:text-base leading-relaxed mt-3" style="--d:80ms">Peninsula Noble Center, Oysterbay, Dar es Salaam, Tanzania.</p>
         <div class="reveal mt-6 rounded-xl overflow-hidden border border-ink/10 shadow-card bg-flame/10" style="--d:120ms">
           <iframe title="Asknetic Group location map" src="https://www.google.com/maps?q=Peninsula+Noble+Center,+Oysterbay,+Dar+es+Salaam&amp;output=embed" width="100%" height="320" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
-        </div>
-        <h3 class="reveal font-display font-bold text-lg text-ink mt-8">Social Media</h3>
-        <div class="reveal flex items-center gap-3 mt-4">
-          <a href="javascript:void(0)" aria-label="Facebook" class="w-11 h-11 rounded-t-[1.1rem] rounded-b-md bg-flamedeep hover:bg-flame text-white flex items-center justify-center transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="javascript:void(0)" aria-label="X (Twitter)" class="w-11 h-11 rounded-t-[1.1rem] rounded-b-md bg-flamedeep hover:bg-flame text-white flex items-center justify-center transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="https://www.instagram.com/asknetic.group/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-11 h-11 rounded-t-[1.1rem] rounded-b-md bg-flamedeep hover:bg-flame text-white flex items-center justify-center transition-colors"><i class="fa-brands fa-instagram"></i></a>
-          <a href="javascript:void(0)" aria-label="LinkedIn" class="w-11 h-11 rounded-t-[1.1rem] rounded-b-md bg-flamedeep hover:bg-flame text-white flex items-center justify-center transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
         </div>
       </div>
     </div>
@@ -496,20 +493,75 @@
     els.forEach(function (el) { el.classList.add('active'); });
   }
 
-  // Contact + newsletter forms (no backend yet: opens the visitor's email app addressed to info@)
+  // Contact form: posted via AJAX to api/contact.php (PHPMailer + SMTP), which replies with JSON; without JS it falls back to a normal POST
   var TO = 'info@askneticgroup.co.tz';
+  var cf = $('contactForm');
+  if (cf) {
+    cf.noValidate = true; // JS shows its own messages; native validation still applies without JS
+    var cfStatus = $('cf-status'), cfBtn = $('cf-submit'), cfLabel = $('cf-submit-label');
+    var cfFields = [$('cf-email'), $('cf-name'), $('cf-message')];
+    var EMAIL_RE = /^[^\s@]+@[^\s@.]+(\.[^\s@.]+)+$/; // stricter than type=email (needs a dot in the domain), like the server's check
+    var sending = false;
+    function setStatus(msg, ok) {
+      cfStatus.textContent = msg;
+      cfStatus.classList.toggle('text-slate-200', ok === undefined);
+      cfStatus.classList.toggle('text-emerald-300', ok === true);
+      cfStatus.classList.toggle('text-flame2', ok === false);
+    }
+    function setSending(on) {
+      sending = on;
+      cfBtn.disabled = on;
+      cf.setAttribute('aria-busy', on);
+      cfLabel.textContent = on ? 'Sending\u2026' : 'Send message';
+    }
+    cfFields.forEach(function (f) {
+      f.addEventListener('input', function () { f.removeAttribute('aria-invalid'); f.removeAttribute('aria-describedby'); });
+    });
+    cf.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (sending) return;
+      var firstBad = null;
+      cfFields.forEach(function (f) {
+        var bad = !f.value.trim() || !f.checkValidity() || (f.type === 'email' && !EMAIL_RE.test(f.value.trim()));
+        if (bad) { f.setAttribute('aria-invalid', 'true'); f.setAttribute('aria-describedby', 'cf-status'); }
+        else { f.removeAttribute('aria-invalid'); f.removeAttribute('aria-describedby'); }
+        if (bad && !firstBad) firstBad = f;
+      });
+      if (firstBad) {
+        var anyEmpty = cfFields.some(function (f) { return !f.value.trim(); });
+        setStatus(anyEmpty ? 'Please fill in your email, name and message.' : 'Please enter a valid email address.', false);
+        firstBad.focus();
+        return;
+      }
+      setSending(true);
+      setStatus('Sending your message\u2026');
+      var ctrl = 'AbortController' in window ? new AbortController() : null;
+      var timer = ctrl && setTimeout(function () { ctrl.abort(); }, 15000);
+      fetch(cf.getAttribute('action'), {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'Accept': 'application/json' },
+        body: new URLSearchParams(new FormData(cf)).toString(),
+        signal: ctrl ? ctrl.signal : undefined
+      }).then(function (res) {
+        return res.json().then(function (data) {
+          if (!res.ok || !data || data.success !== true) throw new Error('HTTP ' + res.status);
+        });
+      }).then(function () {
+        cf.reset();
+        setStatus('Thank you! Your message has been sent. We will get back to you shortly.', true);
+      }).catch(function () {
+        setStatus('Sorry, your message could not be sent. Please try again, or email us at ' + TO + '.', false);
+      }).then(function () {
+        if (timer) clearTimeout(timer);
+        setSending(false);
+      });
+    });
+  }
+
+  // Newsletter form (no backend yet: opens the visitor's email app addressed to info@)
   function openMail(subject, body) {
     window.location.href = 'mailto:' + TO + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
   }
-  var cf = $('contactForm');
-  if (cf) cf.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var st = $('cf-status');
-    if (!cf.checkValidity()) { st.textContent = 'Please fill in your email, name and message.'; return; }
-    var name = $('cf-name').value.trim(), email = $('cf-email').value.trim(), msg = $('cf-message').value.trim();
-    st.textContent = 'Opening your email app to send the message\u2026';
-    openMail('Website enquiry from ' + name, msg + '\n\n\u2014 ' + name + ' (' + email + ')');
-  });
   var nf = $('newsForm');
   if (nf) nf.addEventListener('submit', function (e) {
     e.preventDefault();
